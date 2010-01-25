@@ -1,0 +1,839 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    
+    <title>K-means clustering: What's wrong? (PHP) - Stack Overflow</title>
+    <link rel="stylesheet" href="http://sstatic.net/so/all.css?v=6169">
+    <link rel="shortcut icon" href="http://sstatic.net/so/favicon.ico">
+    <link rel="apple-touch-icon" href="http://sstatic.net/so/apple-touch-icon.png">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://sstatic.net/so/opensearch.xml">
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="http://sstatic.net/so/js/master.js?v=6171"></script>
+    <script type="text/javascript">var imagePath = 'http://sstatic.net/so/img/';</script>
+    
+    <link rel="canonical" href="http://stackoverflow.com/questions/1319232/k-means-clustering-whats-wrong-php">
+    <link rel="alternate" type="application/atom+xml" title="Feed for question 'K-means clustering: What's wrong? (PHP)'" href="/feeds/question/1319232">
+    <script src="http://sstatic.net/so/js/question.js?v=6171" type="text/javascript"></script>
+    
+
+
+    <script type="text/javascript">
+        var fkey = "509bdbf088962d0706c12e2d72abe134";
+    
+        var isBountyQuestion = true;
+        
+        $(function() {
+            
+            vote.init(1319232);
+            comments.init();
+            styleCode();
+        
+        });
+    </script>
+
+
+</head>
+<body>
+    <noscript><div id="noscript-padding"></div></noscript>
+    <div id="notify-container">
+    </div>
+
+
+    <script type="text/javascript">
+        $(function() { notify.showFirstTime(); });
+    </script>
+
+
+    <div class="container">
+        <div id="header">
+            <div id="topbar">
+                <div id="hlinks">
+                    
+                    
+                    <a href="/users/login?returnurl=%2fquestions%2f1319232%2fk-means-clustering-whats-wrong-php">login</a>
+<span class="lsep">|</span>
+<a href="http://careers.stackoverflow.com/">careers</a>
+<span class="lsep">|</span>
+
+                    <a href="/about">about</a> <span class="lsep">|</span> <a href="/faq">faq</a>
+                </div>
+                <div id="hsearch">
+                    <form id="search" action="/search" method="get">
+                    <div>
+                        <input name="q" class="textbox" tabindex="1" onfocus="if (this.value=='search') this.value = ''" type="text" maxlength="80" size="28" value="search">
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="/"><img src="http://sstatic.net/so/img/logo.png" width="250" height="61" alt="Stack Overflow"></a>
+            </div>
+            <div id="hmenus">
+                <div class="nav">
+                    <ul>
+                        <li class="youarehere"><a href="/questions">Questions</a></li>
+                        <li><a href="/tags">Tags</a></li>
+                        <li><a href="/users">Users</a></li>
+                        <li><a href="/badges">Badges</a></li>
+                        <li><a href="/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav" style="float:right">
+                    <ul>
+                        <li style="margin-right:0px" >
+                            <a href="/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div id="content">
+            
+
+<div id="question-header">
+    <h2><a href="/questions/1319232/k-means-clustering-whats-wrong-php" class="question-hyperlink">K-means clustering: What&rsquo;s wrong? (PHP)</a></h2>
+</div>
+
+<div id="mainbar">
+<div id="question" class="">
+    
+    <div class="everyonelovesstackoverflow">
+        <script type="text/javascript">
+            document.write('<s'+'cript lang' + 'uage="jav' + 'ascript" src="http://ads.stackoverflow.com/a.aspx?ZoneID=3&amp;Task=Get&amp;IFR=False&amp;PageID=52405&amp;SiteID=1&amp;Random=' + (+new Date()) + '&amp;Keywords=k-means,clustering,distance,php,arrays">'); 
+            document.write('</'+'scr'+'ipt>');
+        </script>
+        <noscript>
+            <div>
+            <a href="http://ads.stackoverflow.com/a.aspx?ZoneID=3&amp;Task=Click&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405">
+            <img src="http://ads.stackoverflow.com/a.aspx?ZoneID=3&amp;Task=Get&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405" alt="">
+            </a>
+            </div>
+        </noscript>
+    </div>
+
+    
+
+    <table>
+    <tr>
+    <td class="votecell">
+        
+<div class="vote">
+    <input type="hidden" value="1319232">
+    <img class="vote-up"
+        src="http://sstatic.net/so/img/vote-arrow-up.png"
+        width="40" height="25"
+        alt="vote up" title="This question is useful and clear (click again to undo)">
+    <span class="vote-count-post">
+        2
+    </span>
+    <img class="vote-down"
+        src="http://sstatic.net/so/img/vote-arrow-down.png"
+        width="40" height="25"
+        alt="vote down" title="This question is unclear or not useful (click again to undo)">
+
+    <img class="vote-favorite" 
+        src="http://sstatic.net/so/img/vote-favorite-off.png"
+        width="32" height="31"
+        alt="star" title="This is a favorite question (click again to undo)">
+    <div class="favoritecount"><b>4</b></div>    
+
+</div>
+
+    </td>
+    <td>
+        <div>          
+            <div class="post-text">
+                <p>Hello!</p>
+
+<p>I was looking for a way to calculate dynamic market values in a soccer manager game. <a href="http://stackoverflow.com/questions/1278128/manager-game-calculate-market-prices">I asked this question here and got a very good answer from Alceu Costa.</a></p>
+
+<p>I tried to code this algorithm (90 elements, 5 clustes) but it doesn't work correctly:</p>
+
+<ol>
+<li>In the first iteration, a high percentage of the elements changes its cluster.</li>
+<li>From the second iteration, all elements change their cluster.</li>
+<li>Since the algorithm normally works until convergence (no element changes its cluster), it doesn't finish in my case.</li>
+<li>So I set the end to the 15th iteration manually. You can see that it runs infinitely.</li>
+</ol>
+
+<p><a href="http://www.ballmanager.de/aa%5Fmarktwert%5Fcluster.php" rel="nofollow">You can see the output of my algorithm here.</a> What's wrong with it? Can you tell me why it doesn't work correctly?</p>
+
+<p>I hope you can help me. Thank you very much in advance!</p>
+
+<p>Here's the code:</p>
+
+<pre><code>&lt;?php
+include 'zzserver.php';
+function distance($player1, $player2) {
+    global $strengthMax, $maxStrengthMax, $motivationMax, $ageMax;
+    // $playerX = array(strength, maxStrength, motivation, age, id);
+    $distance = 0;
+    $distance += abs($player1['strength']-$player2['strength'])/$strengthMax;
+    $distance += abs($player1['maxStrength']-$player2['maxStrength'])/$maxStrengthMax;
+    $distance += abs($player1['motivation']-$player2['motivation'])/$motivationMax;
+    $distance += abs($player1['age']-$player2['age'])/$ageMax;
+    return $distance;
+}
+function calculateCentroids() {
+    global $cluster;
+    $clusterCentroids = array();
+    foreach ($cluster as $key=&gt;$value) {
+        $strenthValues = array();
+        $maxStrenthValues = array();
+        $motivationValues = array();
+        $ageValues = array();
+        foreach ($value as $clusterEntries) {
+            $strenthValues[] = $clusterEntries['strength'];
+            $maxStrenthValues[] = $clusterEntries['maxStrength'];
+            $motivationValues[] = $clusterEntries['motivation'];
+            $ageValues[] = $clusterEntries['age'];
+        }
+        if (count($strenthValues) == 0) { $strenthValues[] = 0; }
+        if (count($maxStrenthValues) == 0) { $maxStrenthValues[] = 0; }
+        if (count($motivationValues) == 0) { $motivationValues[] = 0; }
+        if (count($ageValues) == 0) { $ageValues[] = 0; }
+        $clusterCentroids[$key] = array('strength'=&gt;array_sum($strenthValues)/count($strenthValues), 'maxStrength'=&gt;array_sum($maxStrenthValues)/count($maxStrenthValues), 'motivation'=&gt;array_sum($motivationValues)/count($motivationValues), 'age'=&gt;array_sum($ageValues)/count($ageValues));
+    }
+    return $clusterCentroids;
+}
+function assignPlayersToNearestCluster() {
+    global $cluster, $clusterCentroids;
+    $playersWhoChangedClusters = 0;
+    // BUILD NEW CLUSTER ARRAY WHICH ALL PLAYERS GO IN THEN START
+    $alte_cluster = array_keys($cluster);
+    $neuesClusterArray = array();
+    foreach ($alte_cluster as $alte_cluster_entry) {
+        $neuesClusterArray[$alte_cluster_entry] = array();
+    }
+    // BUILD NEW CLUSTER ARRAY WHICH ALL PLAYERS GO IN THEN END
+    foreach ($cluster as $oldCluster=&gt;$clusterValues) {
+        // FOR EVERY SINGLE PLAYER START
+        foreach ($clusterValues as $player) {
+            // MEASURE DISTANCE TO ALL CENTROIDS START
+            $abstaende = array();
+            foreach ($clusterCentroids as $CentroidId=&gt;$centroidValues) {
+                $distancePlayerCluster = distance($player, $centroidValues);
+                $abstaende[$CentroidId] = $distancePlayerCluster;
+            }
+            arsort($abstaende);
+            if ($neuesCluster = each($abstaende)) {
+                $neuesClusterArray[$neuesCluster['key']][] = $player; // add to new array
+                // player $player['id'] goes to cluster $neuesCluster['key'] since it is the nearest one
+                if ($neuesCluster['key'] != $oldCluster) {
+                    $playersWhoChangedClusters++;
+                }
+            }
+            // MEASURE DISTANCE TO ALL CENTROIDS END
+        }
+        // FOR EVERY SINGLE PLAYER END
+    }
+    $cluster = $neuesClusterArray;
+    return $playersWhoChangedClusters;
+}
+// CREATE k CLUSTERS START
+$k = 5; // Anzahl Cluster
+$cluster = array();
+for ($i = 0; $i &lt; $k; $i++) {
+    $cluster[$i] = array();
+}
+// CREATE k CLUSTERS END
+// PUT PLAYERS IN RANDOM CLUSTERS START
+$sql1 = "SELECT ids, staerke, talent, trainingseifer, wiealt FROM ".$prefix."spieler LIMIT 0, 90";
+$sql2 = mysql_abfrage($sql1);
+$anzahlSpieler = mysql_num_rows($sql2);
+$anzahlSpielerProCluster = $anzahlSpieler/$k;
+$strengthMax = 0;
+$maxStrengthMax = 0;
+$motivationMax = 0;
+$ageMax = 0;
+$counter = 0; // for $anzahlSpielerProCluster so that all clusters get the same number of players
+while ($sql3 = mysql_fetch_assoc($sql2)) {
+    $assignedCluster = floor($counter/$anzahlSpielerProCluster);
+    $cluster[$assignedCluster][] = array('strength'=&gt;$sql3['staerke'], 'maxStrength'=&gt;$sql3['talent'], 'motivation'=&gt;$sql3['trainingseifer'], 'age'=&gt;$sql3['wiealt'], 'id'=&gt;$sql3['ids']);
+    if ($sql3['staerke'] &gt; $strengthMax) { $strengthMax = $sql3['staerke']; }
+    if ($sql3['talent'] &gt; $maxStrengthMax) { $maxStrengthMax = $sql3['talent']; }
+    if ($sql3['trainingseifer'] &gt; $motivationMax) { $motivationMax = $sql3['trainingseifer']; }
+    if ($sql3['wiealt'] &gt; $ageMax) { $ageMax = $sql3['wiealt']; }
+    $counter++;
+}
+// PUT PLAYERS IN RANDOM CLUSTERS END
+$m = 1;
+while ($m &lt; 16) {
+    $clusterCentroids = calculateCentroids(); // calculate new centroids of the clusters
+    $playersWhoChangedClusters = assignPlayersToNearestCluster(); // assign each player to the nearest cluster
+    if ($playersWhoChangedClusters == 0) { $m = 1001; }
+    echo '&lt;li&gt;Iteration '.$m.': '.$playersWhoChangedClusters.' players have changed place&lt;/li&gt;';
+    $m++;
+}
+print_r($cluster);
+?&gt;
+</code></pre>
+
+            </div>            
+            <div class="post-taglist">
+                <a href="/questions/tagged/k-means" class="post-tag" title="show questions tagged 'k-means'" rel="tag">k-means</a> <a href="/questions/tagged/clustering" class="post-tag" title="show questions tagged 'clustering'" rel="tag">clustering</a> <a href="/questions/tagged/distance" class="post-tag" title="show questions tagged 'distance'" rel="tag">distance</a> <a href="/questions/tagged/php" class="post-tag" title="show questions tagged 'php'" rel="tag">php</a> <a href="/questions/tagged/arrays" class="post-tag" title="show questions tagged 'arrays'" rel="tag">arrays</a> 
+            </div>
+            <table class="fw">
+            <tr>
+            <td class="vt">
+                <div class="post-menu"><a id="flag-post-1319232" title="flag this post for serious problems">flag</a></div>
+                
+            </td>
+        
+            <td align="right" class="post-signature">
+            <div class="user-info"><div class="user-action-time">edited <a href="/posts/1319232/revisions" title="show all edits to this post"><span title="2009-08-28 17:44:27Z" class="relativetime">Aug 28 at 17:44</span></a></div><div class="user-gravatar32"></div><div class="user-details"><br></div></div>
+            
+            </td>
+            
+            <td class="post-signature owner">
+            <div class="user-info"><div class="user-action-time">asked <span title="2009-08-23 18:39:47Z" class="relativetime">Aug 23 at 18:39</span></div><div class="user-gravatar32"><a href="/users/89818/marco92w"><img src="http://www.gravatar.com/avatar/5b4b87dac47beac9fa9eae3470894e08?s=32&amp;d=identicon&amp;r=PG" height="32" width="32" alt=""></a></div><div class="user-details"><a href="/users/89818/marco92w" >marco92w</a><br><span class="reputation-score" title="reputation score">975</span><span title="3 silver badges"><span class="badge2">&#9679;</span><span class="badgecount">3</span></span><span title="20 bronze badges"><span class="badge3">&#9679;</span><span class="badgecount">20</span></span></div></div>
+            <br class="cbt">
+            <div class="accept-rate accept-answer-link" title="this user has accepted an answer for 71 of 77 eligible questions">92% accept rate</div>
+            
+            </td>
+            </tr>
+            </table>
+        </div>
+    </td>
+    </tr>
+
+    
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1319232" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-1172294" class="comment">
+        <td></td>
+        <td class="comment-text"><div>I only see output in the link &quot;You can see my algorithm and its output here.&quot;, no algorithm. &ndash;&nbsp;<a href="/users/63550/peter-mortensen" title="2760" class="comment-user">Peter Mortensen</a> <span class="comment-date"><span title="2009-08-26 21:42:28Z">Aug 26 at 21:42</span></span></div></td>
+    </tr>
+            
+    <tr id="comment-1172893" class="comment">
+        <td></td>
+        <td class="comment-text"><div>In the function 'distance', when you divide the abs( . ) by the Max value, is it returning a floating point value or is it returning an integer value? &ndash;&nbsp;<a href="/users/64138/alceu-costa" title="932" class="comment-user">Alceu Costa</a> <span class="comment-date"><span title="2009-08-27 00:15:55Z">Aug 27 at 0:15</span></span></div></td>
+    </tr>
+            
+    <tr id="comment-1184234" class="comment">
+        <td></td>
+        <td class="comment-text"><div>@Peter Mortensen: Yes, you're right. The algorithm is above in the code field. So I didn't repeat it on the linked page. I've corrected this passage in the question text. &ndash;&nbsp;<a href="/users/89818/marco92w" title="975" class="comment-user owner">marco92w</a> <span class="comment-date"><span title="2009-08-28 17:42:12Z">Aug 28 at 17:42</span></span></div></td>
+    </tr>
+            
+    <tr id="comment-1184264" class="comment">
+        <td></td>
+        <td class="comment-text"><div>@Alceu Costa: It's always returning a floating point value. The result which is given back is a floating point value as well. &ndash;&nbsp;<a href="/users/89818/marco92w" title="975" class="comment-user owner">marco92w</a> <span class="comment-date"><span title="2009-08-28 17:47:58Z">Aug 28 at 17:47</span></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+    
+    </table>
+    
+</div>
+
+
+
+
+<div id="answers">
+
+    <a name="tab-top"></a>
+    <div id="answers-header">
+        <div id="subheader">
+            <h2>2 Answers</h2>
+            <div id="tabs">
+                <a href="/questions/1319232?tab=oldest#tab-top" title="Answers in the order they were given">oldest</a>
+<a href="/questions/1319232?tab=newest#tab-top" title="Most recent answers first">newest</a>
+<a class="youarehere" href="/questions/1319232?tab=votes#tab-top" title="Answers with the most votes first">votes</a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <a name="1336732"></a>
+    
+    <div id="answer-1336732" class="answer ">
+        
+        <table>
+        <tr>
+        <td class="votecell">
+            
+<div class="vote">
+    <input type="hidden" value="1336732">
+    <img class="vote-up"
+        src="http://sstatic.net/so/img/vote-arrow-up.png"
+        width="40" height="25"
+        alt="vote up" title="This answer is useful (click again to undo)">
+    <span class="vote-count-post">
+        0
+    </span>
+    <img class="vote-down"
+        src="http://sstatic.net/so/img/vote-arrow-down.png"
+        width="40" height="25"
+        alt="vote down" title="This answer is not useful (click again to undo)">
+
+</div>
+
+        </td>
+        <td>
+            <div class="post-text"><p>EDIT: disregard, I still get the same result as you, everyone winds up in cluster 4. I shall reconsider my code and try again.</p>
+
+<p>I think I've realised what the problem is, k-means clustering is designed to break up differences in a set, however, because of the way you calculate averages etc. we are getting a situation where there are no large gaps in the ranges.</p>
+
+<p>Might I suggest a change and only concentrate on a single value(strength appears to make most sense to me) to determine the clusters, or abandon this sorting method altogether, and adopt something different(not what you want to hear I know)?</p>
+
+<p>I found a rather nice site with an example k-mean sort using integers, I'm going to try and edit that, I will get back with the results some time tomorrow.</p>
+
+<p><a href="http://code.blip.pt/2009/04/06/k-means-clustering-in-php/" rel="nofollow">http://code.blip.pt/2009/04/06/k-means-clustering-in-php/</a> &lt;-- link I mentioned and forgot about.</p>
+</div>
+            <table class="fw">
+            <tr>
+            <td class="vt">
+                <div class="post-menu"><a href="/questions/1319232/k-means-clustering-whats-wrong-php/1336732#1336732" title="permalink to this answer">link</a><span class="lsep">|</span><a id="flag-post-1336732" title="flag this post for serious problems">flag</a></div>
+                
+            </td>
+            
+            <td align="right" class="post-signature">
+            <div class="user-info"><div class="user-action-time">edited <a href="/posts/1336732/revisions" title="show all edits to this post"><span title="2009-08-28 08:20:59Z" class="relativetime">Aug 28 at 8:20</span></a></div><div class="user-gravatar32"></div><div class="user-details"><br></div></div>
+            </td>
+            
+            <td align="right" class="post-signature">
+            <div class="user-info"><div class="user-action-time">answered <span title="2009-08-26 18:46:52Z" class="relativetime">Aug 26 at 18:46</span></div><div class="user-gravatar32"><a href="/users/97513/scragar"><img src="http://www.gravatar.com/avatar/6d9413974a62ef15d5d506d118250af1?s=32&amp;d=identicon&amp;r=PG" height="32" width="32" alt=""></a></div><div class="user-details"><a href="/users/97513/scragar" >scragar</a><br><span class="reputation-score" title="reputation score">1,336</span><span title="11 bronze badges"><span class="badge3">&#9679;</span><span class="badgecount">11</span></span></div></div>
+            </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+        
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1336732" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-1179902" class="comment">
+        <td></td>
+        <td class="comment-text"><div>It would be cool if you posted the URL for that example, I'm also interested in it. &ndash;&nbsp;<a href="/users/89771/alix-axel" title="9169" class="comment-user">Alix Axel</a> <span class="comment-date"><span title="2009-08-28 00:57:24Z">Aug 28 at 0:57</span></span></div></td>
+    </tr>
+            
+    <tr id="comment-1184290" class="comment">
+        <td></td>
+        <td class="comment-text"><div>Thank you scragar for your try. I'm looking forward to seeing a second approach from you. :)
+
+No, I don't want to focus on one single value. :) If it is possible with integers, it must also be possible with floating point values ... &ndash;&nbsp;<a href="/users/89818/marco92w" title="975" class="comment-user owner">marco92w</a> <span class="comment-date"><span title="2009-08-28 17:51:27Z">Aug 28 at 17:51</span></span></div></td>
+    </tr>
+            
+    <tr id="comment-1187747" class="comment">
+        <td></td>
+        <td class="comment-text"><div>+1 for the good link. If it doesn't help me, it can surely help other people. It's short and well-documented. &ndash;&nbsp;<a href="/users/89818/marco92w" title="975" class="comment-user owner">marco92w</a> <span class="comment-date"><span title="2009-08-29 14:37:38Z">Aug 29 at 14:37</span></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+        </table>
+    </div>
+
+    <div class="everyonelovesstackoverflow">
+        <script type="text/javascript">
+            document.write('<s'+'cript lang' + 'uage="jav' + 'ascript" src="http://ads.stackoverflow.com/a.aspx?ZoneID=14&amp;Task=Get&amp;IFR=False&amp;PageID=52405&amp;SiteID=1&amp;Random=' + (+new Date()) + '&amp;Keywords=k-means,clustering,distance,php,arrays">'); 
+            document.write('</'+'scr'+'ipt>');
+        </script>
+        <noscript>
+            <div>
+            <a href="http://ads.stackoverflow.com/a.aspx?ZoneID=14&amp;Task=Click&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405">
+            <img src="http://ads.stackoverflow.com/a.aspx?ZoneID=14&amp;Task=Get&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405" alt="">
+            </a>
+            </div>
+        </noscript>
+    </div>
+
+    
+
+    <a name="1351595"></a>
+    
+    <div id="answer-1351595" class="answer ">
+        
+        <input type="hidden" id="1351595-is-owned-by-question-owner" value="true">
+        
+        <table>
+        <tr>
+        <td class="votecell">
+            
+<div class="vote">
+    <input type="hidden" value="1351595">
+    <img class="vote-up"
+        src="http://sstatic.net/so/img/vote-arrow-up.png"
+        width="40" height="25"
+        alt="vote up" title="This answer is useful (click again to undo)">
+    <span class="vote-count-post">
+        0
+    </span>
+    <img class="vote-down"
+        src="http://sstatic.net/so/img/vote-arrow-down.png"
+        width="40" height="25"
+        alt="vote down" title="This answer is not useful (click again to undo)">
+<img src="http://sstatic.net/so/img/vote-accepted-bounty.png"
+    class="vote-accepted"
+    style="cursor:default"
+    width="39"
+    height="40"
+    alt="check"
+    title="The question owner accepted this as the best answer Aug 29 at 16:30." >
+</div>
+
+        </td>
+        <td>
+            <div class="post-text"><p>It's so embarassing :D I think the whole problem is caused by only one letter:</p>
+
+<p>In <em>assignPlayersToNearestCluster()</em> you can find <em>arsort($abstaende);</em>. After that, the function <em>each()</em> takes the first value. But it's <em>arsort</em> so the first value must be the highest. So it picks the cluster which has the highest distance value.</p>
+
+<p>So it should be <em>asort</em>, of course. :) To prove that, I've tested it with <em>asort</em> - and I get convergence after 7 iterations. :)</p>
+
+<p>Do you think that was the mistake? If it was, then my problem is solved. In that case: Sorry for annoying you with that stupid question. ;)</p>
+</div>
+            <table class="fw">
+            <tr>
+            <td class="vt">
+                <div class="post-menu"><a href="/questions/1319232/k-means-clustering-whats-wrong-php/1351595#1351595" title="permalink to this answer">link</a><span class="lsep">|</span><a id="flag-post-1351595" title="flag this post for serious problems">flag</a></div>
+                
+            </td>
+            
+            <td align="right" class="post-signature owner">   
+            <div class="user-info"><div class="user-action-time">answered <span title="2009-08-29 14:35:51Z" class="relativetime">Aug 29 at 14:35</span></div><div class="user-gravatar32"><a href="/users/89818/marco92w"><img src="http://www.gravatar.com/avatar/5b4b87dac47beac9fa9eae3470894e08?s=32&amp;d=identicon&amp;r=PG" height="32" width="32" alt=""></a></div><div class="user-details"><a href="/users/89818/marco92w" >marco92w</a><br><span class="reputation-score" title="reputation score">975</span><span title="3 silver badges"><span class="badge2">&#9679;</span><span class="badgecount">3</span></span><span title="20 bronze badges"><span class="badge3">&#9679;</span><span class="badgecount">20</span></span></div></div>
+            </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+        
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1351595" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-1187752" class="comment">
+        <td></td>
+        <td class="comment-text"><div>Questions, may it be stupid or not, when answered correctly, makes us wiser. &ndash;&nbsp;<a href="/users/106778/randell" title="2023" class="comment-user">Randell</a> <span class="comment-date"><span title="2009-08-29 14:40:12Z">Aug 29 at 14:40</span></span></div></td>
+    </tr>
+            
+    <tr id="comment-1187914" class="comment">
+        <td></td>
+        <td class="comment-text"><div>Yes, you're right. :) Here you can learn that you shouldn't mix up arsort() and asort() AND you find general k-means code for PHP. :) &ndash;&nbsp;<a href="/users/89818/marco92w" title="975" class="comment-user owner">marco92w</a> <span class="comment-date"><span title="2009-08-29 15:41:04Z">Aug 29 at 15:41</span></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+        </table>
+    </div>
+
+    <form id="post-form" action="/questions/1319232/answer/submit" method="post">
+        <h2 class="space">Your Answer</h2>
+        
+<script src="http://sstatic.net/so/Js/wmd.js?v=6016" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(function() { 
+        editorReady(1, heartbeat.answers);
+        $('#wmd-input').focus(function() { $('#how-to-tag').hide(); $('#how-to-format').fadeIn('slow'); $('#how-to-title').hide(); });
+    });   
+</script>
+
+<div id="post-editor">
+    
+
+    
+    <div id="wmd-container">
+        <div id="wmd-button-bar"></div>
+        <textarea id="wmd-input" name="post-text" cols="92" rows="15" tabindex="101"></textarea>
+    </div>
+
+
+    <div class="community-option">
+        <input id="communitymode" name="communitymode" type="checkbox" >
+        <label for="communitymode" title="community owned posts do not generate any reputation for the owner, have a lower reputation barrier for collaborative editing, and show only a revision history instead of a signature block">community wiki</label>
+    </div>
+
+    <div id="wmd-preview"></div>
+
+
+    <div id="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="509bdbf088962d0706c12e2d72abe134">
+        <input id="author" name="author" type="text">
+    </div>
+</div>   
+<div class="form-item">
+    <table>
+    <tr>
+    <td class="vm">
+        <label for="openid_identifier">OpenID Login</label>
+        <input id="openid_identifier" name="openid_identifier" class="openid-identifer" type="text" size="40" maxlength="200" value="" tabindex="104">
+        <div class="form-item-info">
+            Get an <a href="http://openid.net/get/" target="_blank">OpenID</a>
+        </div>
+    </td>
+
+    <td class="orcell">
+        <div class="orword">or</div>
+        <div class="orline"></div>
+    </td>
+    <td class="vm">
+        <div>
+            <label for="display-name">Name</label>
+            <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+        </div>
+        <div>
+            <label for="m-address">Email</label>
+            <input id="m-address" name="m-address" type="text" size="40" maxlength="100" value="" tabindex="106">
+            <span class="edit-field-overlay" style="color:#999; font-weight:normal">never shown</span>
+        </div>
+        <div>
+            <label for="home-page">Home Page</label>
+            <input id="home-page" name="home-page" type="text" size="40" maxlength="200" value="" tabindex="107">
+        </div>
+    </td>
+
+    </tr>
+    </table>
+</div>
+
+        
+        <div class="form-submit cbt"><input id="submit-button" type="submit" value="Post Your Answer" tabindex="110"></div>
+    </form>
+    
+    
+
+    <h2 class="space">
+        Not the answer you're looking for?
+        Browse other questions tagged <a href="/questions/tagged/k-means" class="post-tag" title="show questions tagged 'k-means'" rel="tag">k-means</a> <a href="/questions/tagged/clustering" class="post-tag" title="show questions tagged 'clustering'" rel="tag">clustering</a> <a href="/questions/tagged/distance" class="post-tag" title="show questions tagged 'distance'" rel="tag">distance</a> <a href="/questions/tagged/php" class="post-tag" title="show questions tagged 'php'" rel="tag">php</a> <a href="/questions/tagged/arrays" class="post-tag" title="show questions tagged 'arrays'" rel="tag">arrays</a>  or <a href="/questions/ask">ask your own question</a>.
+    </h2>
+</div>
+
+<img src="/posts/1319232/ivc/5956" class="dno" alt="">
+
+</div>
+
+<div id="sidebar" style="width:220px">
+
+
+<div class="module newuser" style="display:none">
+    <h4>Hello World!</h4>
+    <div>
+        <p>Stack Overflow is a <b>collaboratively edited question and answer site for programmers</b> &ndash; regardless of platform or language. It's 100% free, no registration required.</p>
+        <p class="tar"><a href="/about">about &raquo;</a>&nbsp;&nbsp;&nbsp;<a href="/faq">faq &raquo;</a></p>
+    </div>
+</div>
+    <div class="module" style="padding-bottom:1px">
+    <p class="label-key">tagged</p>
+    <div class="tagged">
+        <a href="/questions/tagged/php" class="post-tag" title="show questions tagged 'php'" rel="tag">php</a>&nbsp;<span class="item-multiplier">&times;&nbsp;26342</span><br>
+<a href="/questions/tagged/arrays" class="post-tag" title="show questions tagged 'arrays'" rel="tag">arrays</a>&nbsp;<span class="item-multiplier">&times;&nbsp;3278</span><br>
+<a href="/questions/tagged/clustering" class="post-tag" title="show questions tagged 'clustering'" rel="tag">clustering</a>&nbsp;<span class="item-multiplier">&times;&nbsp;185</span><br>
+<a href="/questions/tagged/distance" class="post-tag" title="show questions tagged 'distance'" rel="tag">distance</a>&nbsp;<span class="item-multiplier">&times;&nbsp;56</span><br>
+<a href="/questions/tagged/k-means" class="post-tag" title="show questions tagged 'k-means'" rel="tag">k-means</a>&nbsp;<span class="item-multiplier">&times;&nbsp;4</span><br>
+
+    </div> 
+    <p class="label-key">asked</p>
+    <p class="label-value" title="2009-08-23 18:39:47Z">5 months ago</p>
+    <p class="label-key">viewed</p>
+    <p class="label-value">327 times</p>
+
+    <p class="label-key">latest activity</p>
+    <p class="label-value" title="2009-08-29 14:35:51Z">4 months ago</p>
+
+    </div>
+
+    
+    <div class="everyonelovesstackoverflow">
+        <script type="text/javascript">
+            document.write('<s'+'cript lang' + 'uage="jav' + 'ascript" src="http://ads.stackoverflow.com/a.aspx?ZoneID=4&amp;Task=Get&amp;IFR=False&amp;PageID=52405&amp;SiteID=1&amp;Random=' + (+new Date()) + '&amp;Keywords=k-means,clustering,distance,php,arrays">'); 
+            document.write('</'+'scr'+'ipt>');
+        </script>
+        <noscript>
+            <div>
+            <a href="http://ads.stackoverflow.com/a.aspx?ZoneID=4&amp;Task=Click&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405">
+            <img src="http://ads.stackoverflow.com/a.aspx?ZoneID=4&amp;Task=Get&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405" alt="">
+            </a>
+            </div>
+        </noscript>
+    </div>
+
+    
+    <div class="welovestackoverflow">
+        <script type="text/javascript">
+            
+	document.write(
+	   '<strong>Wanted:</strong> ' +
+	   '<a href="http://jobs.stackoverflow.com/?6004">' +
+	   "Sr. Software Developers" +
+	   ' at ' +
+	   "Dotomi</a> (" +
+	   "Chicago, IL  60661" +
+	   '). See this and other great job listings at ' +
+	   '<a href="http://jobs.stackoverflow.com">jobs.stackoverflow.com</a>.');
+	
+        </script>
+    </div>
+    
+    <div class="module">
+    <h4>Related</h4>
+    <div class="related">
+    <div class="spacer">
+<a href="/questions/1793532/how-do-i-determine-k-when-using-k-means-clustering" class="question-hyperlink">How do I determine k when using k-means clustering?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1545606/python-k-means-algorithm" class="question-hyperlink">Python k-means algorithm </a>
+</div>
+<div class="spacer">
+<a href="/questions/1650904/opencv-k-means-kmeans2" class="question-hyperlink">OpenCV K-Means (kmeans2)</a>
+</div>
+<div class="spacer">
+<a href="/questions/1655840/avg-distance-between-points-in-a-cluster" class="question-hyperlink">Avg distance between points in a cluster</a>
+</div>
+<div class="spacer">
+<a href="/questions/1641808/comparing-cross-point-between-2-images-in-matlab" class="question-hyperlink">Comparing cross point between 2 images in MATLAB</a>
+</div>
+<div class="spacer">
+<a href="/questions/1643138/how-to-calculate-distance-between-two-places-is-there-any-service-available-by-g" class="question-hyperlink">How to calculate distance between two places? Is there any service available by Google Map for iphone?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1604298/distance-between-two-locations-using-latitude-and-longitude-way-off-what-google-s" class="question-hyperlink">Distance between two locations using Latitude and Longitude way off what Google says.</a>
+</div>
+<div class="spacer">
+<a href="/questions/1607943/css-set-maximum-distance-from-browser-edge" class="question-hyperlink">CSS Set maximum distance from browser edge.</a>
+</div>
+<div class="spacer">
+<a href="/questions/1515606/determining-the-distance-between-points-in-n-dimensions" class="question-hyperlink">determining the distance between points in n-dimensions</a>
+</div>
+<div class="spacer">
+<a href="/questions/1526417/how-do-i-find-the-lat-long-that-is-x-km-east-west-of-a-given-lat-long" class="question-hyperlink">How do I find the lat/long that is x km east/west of a given lat/long?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1375003/maps-does-calculating-distance-between-2-points-factor-in-altitude" class="question-hyperlink">Maps: Does calculating distance between 2 points factor in altitude?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1470309/google-maps-api-road-distance-between-2-points" class="question-hyperlink">Google Maps API - &ldquo;road&rdquo; distance between 2 points</a>
+</div>
+<div class="spacer">
+<a href="/questions/1483280/regex-for-distance-in-metric-system" class="question-hyperlink">RegEx for distance in metric system</a>
+</div>
+<div class="spacer">
+<a href="/questions/1318221/naming-this-algorithm-comparing-and-interpolating-points" class="question-hyperlink">Naming this algorithm: Comparing and interpolating points?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1318595/which-data-structure-is-appropriate-to-query-all-points-within-distance-d-from-p" class="question-hyperlink">which data structure is appropriate to query &ldquo;all points within distance d from point p&rdquo;</a>
+</div>
+<div class="spacer">
+<a href="/questions/1249767/uiscrollview-scroll-distance" class="question-hyperlink">UIScrollView Scroll Distance?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1253238/i-want-to-create-a-distance-formula-for-6-degree-of-freedom" class="question-hyperlink">I want to create a distance formula for 6 degree of freedom??</a>
+</div>
+<div class="spacer">
+<a href="/questions/1258698/storing-distances-in-mysql" class="question-hyperlink">Storing distances in MySQL</a>
+</div>
+<div class="spacer">
+<a href="/questions/1271734/2d-game-fastest-way-to-find-x-closest-entities-for-another-entity-huge-amoun" class="question-hyperlink">2D Game: Fast(est) way to find x closest entities for another entity - huge amount of entities, highly dynamic.</a>
+</div>
+
+    </div>
+    </div>
+
+</div>
+
+<div id="mainbar-footer">    
+    
+<div id="feed-link">
+    <div id="feed-link-image"><a href="/feeds/question/1319232" title="feed of this question and its answers"><img src="http://sstatic.net/so/Img/feed-icon-small.png" width="14" height="14" alt="feed icon"></a></div>
+    <div id="feed-link-text"><a href="/feeds/question/1319232" title="feed of this question and its answers">question feed</a></div>
+</div>
+
+</div>
+
+
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div id="footer-menu">
+                <a href="/about">about</a> |
+                <a href="/faq">faq</a> |
+                <a href="http://blog.stackoverflow.com/">blog</a> |
+                <a href="http://itc.conversationsnetwork.org/series/stackoverflow.html">podcast</a> |
+                <a href="/privacy">privacy policy</a> |
+                <a href="http://ads.stackoverflow.com/a.aspx?ZoneID=0&amp;BannerID=323&amp;AdvertiserID=5&amp;CampaignID=194&amp;Task=Click&amp;SiteID=1">advertising info</a> |
+                <b><a href="mailto:team@stackoverflow.com">contact us</a></b> |
+                <b><a href="http://meta.stackoverflow.com">feedback always welcome</a></b>
+                <div id="footer-sites">
+                    <span style="color:#FE7A15;font-size:140%">&#9632;</span>&nbsp;<a href="http://stackoverflow.com">stackoverflow.com</a>&nbsp;&nbsp;
+                    <span style="color:#FE7A15;font-size:140%">&#9632;</span>&nbsp;<a href="http://careers.stackoverflow.com">careers</a>&nbsp;&nbsp;
+                    <span style="color:#E8272C;font-size:140%">&#9632;</span>&nbsp;<a href="http://serverfault.com">serverfault.com</a>&nbsp;&nbsp;
+                    <span style="color:#00AFEF;font-size:140%">&#9632;</span>&nbsp;<a href="http://superuser.com">superuser.com</a>&nbsp;&nbsp;
+                    <span style="color:#969696;font-size:140%">&#9632;</span>&nbsp;<a href="http://meta.stackoverflow.com">meta</a>&nbsp;&nbsp;
+                    <a href="http://www.howtogeek.com">howtogeek.com</a>&nbsp;&nbsp;
+                    <a href="http://doctype.com">doctype.com</a>
+                </div>
+            </div>
+            <div id="footer-flair">
+                <img src="http://sstatic.net/so/Img/footer-cc-wiki-peak-internet.png" width="168" height="67" alt="cc-wiki, PEAK Internet" usemap="#footermap">
+                <map name="footermap">
+                    <area href="http://creativecommons.org/licenses/by-sa/2.5/" alt="cc-wiki" title="Creative Commons: Attribution - Share Alike"
+                        coords="0,0,50,67">
+                    <area href="http://www.peakinternet.com/business/hosting/colocation-dedicated#" alt="PEAK Internet"
+                        title="powered by PEAK Internet dedicated server hosting" coords="62,0,168,67">
+                </map>
+                <div id="svnrev">svn revision: 6176</div>
+            </div>
+            <div id="copyright">
+                site design and logo is &copy; 2010 stackoverflow.com llc; 
+                user contributed content licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+        </div>
+    </div>
+    
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+    
+    <script type="text/javascript">
+        document.write(unescape("%3Cscript src='http://www.google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-5620270-1");
+        pageTracker._trackPageview();
+    </script>
+    <script type="text/javascript">
+        _qoptions = { qacct : "p-c1rF4kxgLUzNc" };
+    </script>
+    <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+        
+</body>
+</html>

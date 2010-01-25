@@ -1,0 +1,1021 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    
+    <title>Compare two images the python/linux way - Stack Overflow</title>
+    <link rel="stylesheet" href="http://sstatic.net/so/all.css?v=6169">
+    <link rel="shortcut icon" href="http://sstatic.net/so/favicon.ico">
+    <link rel="apple-touch-icon" href="http://sstatic.net/so/apple-touch-icon.png">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://sstatic.net/so/opensearch.xml">
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="http://sstatic.net/so/js/master.js?v=6171"></script>
+    <script type="text/javascript">var imagePath = 'http://sstatic.net/so/img/';</script>
+    
+    <link rel="canonical" href="http://stackoverflow.com/questions/1927660/compare-two-images-the-python-linux-way">
+    <link rel="alternate" type="application/atom+xml" title="Feed for question 'Compare two images the python/linux way'" href="/feeds/question/1927660">
+    <script src="http://sstatic.net/so/js/question.js?v=6171" type="text/javascript"></script>
+    
+
+
+    <script type="text/javascript">
+        var fkey = "509bdbf088962d0706c12e2d72abe134";
+    
+        
+        
+        $(function() {
+            
+            vote.init(1927660);
+            comments.init();
+            styleCode();
+        
+        });
+    </script>
+
+
+</head>
+<body>
+    <noscript><div id="noscript-padding"></div></noscript>
+    <div id="notify-container">
+    </div>
+
+
+    <script type="text/javascript">
+        $(function() { notify.showFirstTime(); });
+    </script>
+
+
+    <div class="container">
+        <div id="header">
+            <div id="topbar">
+                <div id="hlinks">
+                    
+                    
+                    <a href="/users/login?returnurl=%2fquestions%2f1927660%2fcompare-two-images-the-python-linux-way">login</a>
+<span class="lsep">|</span>
+<a href="http://careers.stackoverflow.com/">careers</a>
+<span class="lsep">|</span>
+
+                    <a href="/about">about</a> <span class="lsep">|</span> <a href="/faq">faq</a>
+                </div>
+                <div id="hsearch">
+                    <form id="search" action="/search" method="get">
+                    <div>
+                        <input name="q" class="textbox" tabindex="1" onfocus="if (this.value=='search') this.value = ''" type="text" maxlength="80" size="28" value="search">
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="/"><img src="http://sstatic.net/so/img/logo.png" width="250" height="61" alt="Stack Overflow"></a>
+            </div>
+            <div id="hmenus">
+                <div class="nav">
+                    <ul>
+                        <li class="youarehere"><a href="/questions">Questions</a></li>
+                        <li><a href="/tags">Tags</a></li>
+                        <li><a href="/users">Users</a></li>
+                        <li><a href="/badges">Badges</a></li>
+                        <li><a href="/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav" style="float:right">
+                    <ul>
+                        <li style="margin-right:0px" >
+                            <a href="/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div id="content">
+            
+
+<div id="question-header">
+    <h2><a href="/questions/1927660/compare-two-images-the-python-linux-way" class="question-hyperlink">Compare two images the python/linux way</a></h2>
+</div>
+
+<div id="mainbar">
+<div id="question" class="">
+    
+    <div class="everyonelovesstackoverflow">
+        <script type="text/javascript">
+            document.write('<s'+'cript lang' + 'uage="jav' + 'ascript" src="http://ads.stackoverflow.com/a.aspx?ZoneID=3&amp;Task=Get&amp;IFR=False&amp;PageID=52405&amp;SiteID=1&amp;Random=' + (+new Date()) + '&amp;Keywords=python,linux,images">'); 
+            document.write('</'+'scr'+'ipt>');
+        </script>
+        <noscript>
+            <div>
+            <a href="http://ads.stackoverflow.com/a.aspx?ZoneID=3&amp;Task=Click&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405">
+            <img src="http://ads.stackoverflow.com/a.aspx?ZoneID=3&amp;Task=Get&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405" alt="">
+            </a>
+            </div>
+        </noscript>
+    </div>
+
+    
+
+    <table>
+    <tr>
+    <td class="votecell">
+        
+<div class="vote">
+    <input type="hidden" value="1927660">
+    <img class="vote-up"
+        src="http://sstatic.net/so/img/vote-arrow-up.png"
+        width="40" height="25"
+        alt="vote up" title="This question is useful and clear (click again to undo)">
+    <span class="vote-count-post">
+        6
+    </span>
+    <img class="vote-down"
+        src="http://sstatic.net/so/img/vote-arrow-down.png"
+        width="40" height="25"
+        alt="vote down" title="This question is unclear or not useful (click again to undo)">
+
+    <img class="vote-favorite" 
+        src="http://sstatic.net/so/img/vote-favorite-off.png"
+        width="32" height="31"
+        alt="star" title="This is a favorite question (click again to undo)">
+    <div class="favoritecount"><b>3</b></div>    
+
+</div>
+
+    </td>
+    <td>
+        <div>          
+            <div class="post-text">
+                <p>Trying to solve a problem of preventing duplicate images to be uploaded.</p>
+
+<p>I have two JPGs. Looking at them I can see that they are in fact identical. But for some reason they have different file size (one is pulled from a backup, the other is another upload) and so they have a different md5 checksum. </p>
+
+<p>How can I efficiently and confidently compare two images in the same sense as a human would be able to see that they are clearly identical?</p>
+
+<p>Example: <a href="http://static.peterbe.com/a.jpg" rel="nofollow">http://static.peterbe.com/a.jpg</a> and <a href="http://static.peterbe.com/b.jpg" rel="nofollow">http://static.peterbe.com/b.jpg</a></p>
+
+<p><strong>Update</strong> </p>
+
+<p>I wrote this script:</p>
+
+<pre><code>import math, operator
+from PIL import Image
+def compare(file1, file2):
+    image1 = Image.open(file1)
+    image2 = Image.open(file2)
+    h1 = image1.histogram()
+    h2 = image2.histogram()
+    rms = math.sqrt(reduce(operator.add,
+                           map(lambda a,b: (a-b)**2, h1, h2))/len(h1))
+    return rms
+
+if __name__=='__main__':
+    import sys
+    file1, file2 = sys.argv[1:]
+    print compare(file1, file2)
+</code></pre>
+
+<p>Then I downloaded the two visually identical images and ran the script. Output:</p>
+
+<pre><code>58.9830484122
+</code></pre>
+
+<p>Can anybody tell me what a suitable cutoff should be?</p>
+
+<p><strong>Update II</strong></p>
+
+<p>The difference between a.jpg and b.jpg is that the second one has been saved with PIL:</p>
+
+<pre><code>b=Image.open('a.jpg')
+b.save(open('b.jpg','wb'))
+</code></pre>
+
+<p>This apparently applies some very very light quality modifications. I've now solved my problem by applying the same PIL save to the file being uploaded without doing anything with it and it now works!</p>
+
+            </div>            
+            <div class="post-taglist">
+                <a href="/questions/tagged/python" class="post-tag" title="show questions tagged 'python'" rel="tag">python</a> <a href="/questions/tagged/linux" class="post-tag" title="show questions tagged 'linux'" rel="tag">linux</a> <a href="/questions/tagged/images" class="post-tag" title="show questions tagged 'images'" rel="tag">images</a> 
+            </div>
+            <table class="fw">
+            <tr>
+            <td class="vt">
+                <div class="post-menu"><a id="flag-post-1927660" title="flag this post for serious problems">flag</a></div>
+                
+            </td>
+        
+            <td align="right" class="post-signature">
+            <div class="user-info"><div class="user-action-time">edited <a href="/posts/1927660/revisions" title="show all edits to this post"><span title="2009-12-18 13:05:19Z" class="relativetime">Dec 18 at 13:05</span></a></div><div class="user-gravatar32"></div><div class="user-details"><br></div></div>
+            
+            </td>
+            
+            <td class="post-signature owner">
+            <div class="user-info"><div class="user-action-time">asked <span title="2009-12-18 11:27:38Z" class="relativetime">Dec 18 at 11:27</span></div><div class="user-gravatar32"><a href="/users/205832/peter-bengtsson"><img src="http://www.gravatar.com/avatar/4e6e13241f3520f022c2f2545258bc58?s=32&amp;d=identicon&amp;r=PG" height="32" width="32" alt=""></a></div><div class="user-details"><a href="/users/205832/peter-bengtsson" >Peter Bengtsson</a><br><span class="reputation-score" title="reputation score">179</span><span title="6 bronze badges"><span class="badge3">&#9679;</span><span class="badgecount">6</span></span></div></div>
+            </td>
+            </tr>
+            </table>
+        </div>
+    </td>
+    </tr>
+
+    
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1927660" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-1835403" class="comment">
+        <td></td>
+        <td class="comment-text"><div>As far as I can neither of them have exif data.  &ndash;&nbsp;<a href="/users/205832/peter-bengtsson" title="179" class="comment-user owner">Peter Bengtsson</a> <span class="comment-date"><span title="2009-12-18 11:28:10Z">Dec 18 at 11:28</span></span></div></td>
+    </tr>
+            
+    <tr id="comment-1836094" class="comment">
+        <td></td>
+        <td class="comment-text"><div><code>reduce(operator.add(...))</code> -&gt; <code>sum(...)</code>.  &ndash;&nbsp;<a href="/users/4279/j-f-sebastian" title="14647" class="comment-user">J.F. Sebastian</a> <span class="comment-date"><span title="2009-12-18 13:49:33Z">Dec 18 at 13:49</span></span></div></td>
+    </tr>
+            
+    <tr id="comment-1836138" class="comment">
+        <td></td>
+        <td class="comment-text"><div>For what it's worth (mainly in references to background info) this is like a simplified version of this question: <a href="http://stackoverflow.com/questions/1819124/image-comparison-algorithm" rel="nofollow" title="image comparison algorithm">stackoverflow.com/questions/1819124/&hellip;</a> &ndash;&nbsp;<a href="/users/221537/peter-hansen" title="2609" class="comment-user">Peter Hansen</a> <span class="comment-date"><span title="2009-12-18 13:57:04Z">Dec 18 at 13:57</span></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+    
+    </table>
+    
+</div>
+
+
+
+
+<div id="answers">
+
+    <a name="tab-top"></a>
+    <div id="answers-header">
+        <div id="subheader">
+            <h2>5 Answers</h2>
+            <div id="tabs">
+                <a href="/questions/1927660?tab=oldest#tab-top" title="Answers in the order they were given">oldest</a>
+<a href="/questions/1927660?tab=newest#tab-top" title="Most recent answers first">newest</a>
+<a class="youarehere" href="/questions/1927660?tab=votes#tab-top" title="Answers with the most votes first">votes</a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <a name="1927681"></a>
+    
+    <div id="answer-1927681" class="answer ">
+        
+        <table>
+        <tr>
+        <td class="votecell">
+            
+<div class="vote">
+    <input type="hidden" value="1927681">
+    <img class="vote-up"
+        src="http://sstatic.net/so/img/vote-arrow-up.png"
+        width="40" height="25"
+        alt="vote up" title="This answer is useful (click again to undo)">
+    <span class="vote-count-post">
+        1
+    </span>
+    <img class="vote-down"
+        src="http://sstatic.net/so/img/vote-arrow-down.png"
+        width="40" height="25"
+        alt="vote down" title="This answer is not useful (click again to undo)">
+<img src="http://sstatic.net/so/img/vote-accepted-on.png"
+    class="vote-accepted"
+    style="cursor:default"
+    width="30"
+    height="31"
+    alt="check"
+    title="The question owner accepted this as the best answer Dec 18 at 13:06" >
+</div>
+
+        </td>
+        <td>
+            <div class="post-text"><p>There is a OSS project that uses WebDriver to take screen shots and then compares the images to see if there are any issues (<a href="http://code.google.com/p/fighting-layout-bugs/" rel="nofollow">http://code.google.com/p/fighting-layout-bugs/)</a>). It does it by openning the file into a stream and then comparing every bit. </p>
+
+<p>You may be able to do something similar with <a href="http://www.pythonware.com/products/pil" rel="nofollow">PIL</a>.</p>
+
+<p>EDIT:</p>
+
+<p>After more research I found</p>
+
+<pre><code>h1 = Image.open("image1").histogram()
+h2 = Image.open("image2").histogram()
+
+rms = math.sqrt(reduce(operator.add,
+    map(lambda a,b: (a-b)**2, h1, h2))/len(h1))
+</code></pre>
+
+<p>on <a href="http://snipplr.com/view/757/compare-two-pil-images-in-python/" rel="nofollow">http://snipplr.com/view/757/compare-two-pil-images-in-python/</a> and <a href="http://effbot.org/zone/pil-comparing-images.htm" rel="nofollow">http://effbot.org/zone/pil-comparing-images.htm</a></p>
+</div>
+            <table class="fw">
+            <tr>
+            <td class="vt">
+                <div class="post-menu"><a href="/questions/1927660/compare-two-images-the-python-linux-way/1927681#1927681" title="permalink to this answer">link</a><span class="lsep">|</span><a id="flag-post-1927681" title="flag this post for serious problems">flag</a></div>
+                
+            </td>
+            
+            <td align="right" class="post-signature">
+            <div class="user-info"><div class="user-action-time">answered <span title="2009-12-18 11:32:36Z" class="relativetime">Dec 18 at 11:32</span></div><div class="user-gravatar32"><a href="/users/108827/automatedtester"><img src="http://www.gravatar.com/avatar/87b062ebe606f08b5c9b7b8b2d64f2ec?s=32&amp;d=identicon&amp;r=PG" height="32" width="32" alt=""></a></div><div class="user-details"><a href="/users/108827/automatedtester" >AutomatedTester</a><br><span class="reputation-score" title="reputation score">4,052</span><span title="1 silver badge"><span class="badge2">&#9679;</span><span class="badgecount">1</span></span><span title="13 bronze badges"><span class="badge3">&#9679;</span><span class="badgecount">13</span></span></div></div>
+            </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+        
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1927681" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-1835815" class="comment">
+        <td></td>
+        <td class="comment-text"><div>I applied that technique but for the two images I linked to above, the RMS is 58.9. If I compare a.jpg with a.jpg I get 0.0 which is expected. I changed one in gimp by drawing some crap on it and the RMS came to 675.6 &ndash;&nbsp;<a href="/users/205832/peter-bengtsson" title="179" class="comment-user owner">Peter Bengtsson</a> <span class="comment-date"><span title="2009-12-18 12:47:14Z">Dec 18 at 12:47</span></span></div></td>
+    </tr>
+            
+    <tr id="comment-1835817" class="comment">
+        <td></td>
+        <td class="comment-text"><div>This code finds the RMS error between the images’ histograms, <b>NOT</b> between the images themselves. Consider that two images could have identical histograms but be completely different, for example if you “scrambled” the pixels. &ndash;&nbsp;<a href="/users/215593/musicinmybrain" title="151" class="comment-user">musicinmybrain</a> <span class="comment-date"><span title="2009-12-18 12:47:21Z">Dec 18 at 12:47</span></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+        </table>
+    </div>
+
+    <div class="everyonelovesstackoverflow">
+        <script type="text/javascript">
+            document.write('<s'+'cript lang' + 'uage="jav' + 'ascript" src="http://ads.stackoverflow.com/a.aspx?ZoneID=14&amp;Task=Get&amp;IFR=False&amp;PageID=52405&amp;SiteID=1&amp;Random=' + (+new Date()) + '&amp;Keywords=python,linux,images">'); 
+            document.write('</'+'scr'+'ipt>');
+        </script>
+        <noscript>
+            <div>
+            <a href="http://ads.stackoverflow.com/a.aspx?ZoneID=14&amp;Task=Click&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405">
+            <img src="http://ads.stackoverflow.com/a.aspx?ZoneID=14&amp;Task=Get&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405" alt="">
+            </a>
+            </div>
+        </noscript>
+    </div>
+
+    
+
+    <a name="1927689"></a>
+    
+    <div id="answer-1927689" class="answer ">
+        
+        <table>
+        <tr>
+        <td class="votecell">
+            
+<div class="vote">
+    <input type="hidden" value="1927689">
+    <img class="vote-up"
+        src="http://sstatic.net/so/img/vote-arrow-up.png"
+        width="40" height="25"
+        alt="vote up" title="This answer is useful (click again to undo)">
+    <span class="vote-count-post">
+        1
+    </span>
+    <img class="vote-down"
+        src="http://sstatic.net/so/img/vote-arrow-down.png"
+        width="40" height="25"
+        alt="vote down" title="This answer is not useful (click again to undo)">
+
+</div>
+
+        </td>
+        <td>
+            <div class="post-text"><p>I guess you should decode the images and do a pixel by pixel comparison to see if they're reasonably similar.</p>
+
+<p>With PIL and Numpy you can do it quite easily:</p>
+
+<p>import Image
+import numpy
+import sys</p>
+
+<pre><code>def main():
+    img1 = Image.open(sys.argv[1])
+    img2 = Image.open(sys.argv[2])
+
+    if img1.size != img2.size or img1.getbands() != img2.getbands():
+        return -1
+
+    s = 0
+    for band_index, band in enumerate(img1.getbands()):
+        m1 = numpy.array([p[band_index] for p in img1.getdata()]).reshape(*img1.size)
+        m2 = numpy.array([p[band_index] for p in img2.getdata()]).reshape(*img2.size)
+        s += numpy.sum(numpy.abs(m1-m2))
+    print s
+
+if __name__ == "__main__":
+    sys.exit(main())
+</code></pre>
+
+<p>This will give you a numeric value that should be very close to 0 if the images are quite the same.</p>
+</div>
+            <table class="fw">
+            <tr>
+            <td class="vt">
+                <div class="post-menu"><a href="/questions/1927660/compare-two-images-the-python-linux-way/1927689#1927689" title="permalink to this answer">link</a><span class="lsep">|</span><a id="flag-post-1927689" title="flag this post for serious problems">flag</a></div>
+                
+            </td>
+            
+            <td align="right" class="post-signature">
+            <div class="user-info"><div class="user-action-time">answered <span title="2009-12-18 11:34:01Z" class="relativetime">Dec 18 at 11:34</span></div><div class="user-gravatar32"><a href="/users/106979/fortran"><img src="http://www.gravatar.com/avatar/404f9cfe85761b1f2349f7b3cf83d12f?s=32&amp;d=identicon&amp;r=PG" height="32" width="32" alt=""></a></div><div class="user-details"><a href="/users/106979/fortran" >fortran</a><br><span class="reputation-score" title="reputation score">5,527</span><span title="4 silver badges"><span class="badge2">&#9679;</span><span class="badgecount">4</span></span><span title="21 bronze badges"><span class="badge3">&#9679;</span><span class="badgecount">21</span></span></div></div>
+            </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+        
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1927689" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+        </table>
+    </div>
+
+
+    <a name="1927991"></a>
+    
+    <div id="answer-1927991" class="answer ">
+        
+        <table>
+        <tr>
+        <td class="votecell">
+            
+<div class="vote">
+    <input type="hidden" value="1927991">
+    <img class="vote-up"
+        src="http://sstatic.net/so/img/vote-arrow-up.png"
+        width="40" height="25"
+        alt="vote up" title="This answer is useful (click again to undo)">
+    <span class="vote-count-post">
+        1
+    </span>
+    <img class="vote-down"
+        src="http://sstatic.net/so/img/vote-arrow-down.png"
+        width="40" height="25"
+        alt="vote down" title="This answer is not useful (click again to undo)">
+
+</div>
+
+        </td>
+        <td>
+            <div class="post-text"><p>First, I should note they’re <strong>not</strong> identical; b has been recompressed and lost quality. You can see this if you look carefully on a good monitor.</p>
+
+<p>To determine that they are subjectively “the same,” you would have to do something like what fortran suggested, although you will have to arbitrarily establish a threshold for “sameness.” To make s independent of image size, and to handle channels a little more sensibly, I would consider doing the RMS (root mean square) Euclidean distance in colorspace between the pixels of the two images. I don’t have time to write out the code right now, but basically for each pixel, you compute</p>
+
+<pre><code>(R_2 - R_1) ** 2 + (G_2 - G_1) ** 2 + (B_2 - B_1) ** 2
+</code></pre>
+
+<p>, adding in an</p>
+
+<p>(A_2 - A_1) ** 2</p>
+
+<p>term if the image has an alpha channel, etc. The result is the square of the colorspace distance between the two images. Find the mean (average) across all pixels, then take the square root of the resulting scalar. Then decide a reasonable threshold for this value.</p>
+
+<p>Or, you might just decide that copies of the same original image with different lossy compression are not truly “the same” and stick with the file hash.</p>
+</div>
+            <table class="fw">
+            <tr>
+            <td class="vt">
+                <div class="post-menu"><a href="/questions/1927660/compare-two-images-the-python-linux-way/1927991#1927991" title="permalink to this answer">link</a><span class="lsep">|</span><a id="flag-post-1927991" title="flag this post for serious problems">flag</a></div>
+                
+            </td>
+            
+            <td align="right" class="post-signature">
+            <div class="user-info"><div class="user-action-time">answered <span title="2009-12-18 12:39:39Z" class="relativetime">Dec 18 at 12:39</span></div><div class="user-gravatar32"><a href="/users/215593/musicinmybrain"><img src="http://www.gravatar.com/avatar/0953d9414991b3394a7916aa0c4a8974?s=32&amp;d=identicon&amp;r=PG" height="32" width="32" alt=""></a></div><div class="user-details"><a href="/users/215593/musicinmybrain" >musicinmybrain</a><br><span class="reputation-score" title="reputation score">151</span><span title="4 bronze badges"><span class="badge3">&#9679;</span><span class="badgecount">4</span></span></div></div>
+            </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+        
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1927991" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+        </table>
+    </div>
+
+
+    <a name="1927720"></a>
+    
+    <div id="answer-1927720" class="answer ">
+        
+        <table>
+        <tr>
+        <td class="votecell">
+            
+<div class="vote">
+    <input type="hidden" value="1927720">
+    <img class="vote-up"
+        src="http://sstatic.net/so/img/vote-arrow-up.png"
+        width="40" height="25"
+        alt="vote up" title="This answer is useful (click again to undo)">
+    <span class="vote-count-post">
+        0
+    </span>
+    <img class="vote-down"
+        src="http://sstatic.net/so/img/vote-arrow-down.png"
+        width="40" height="25"
+        alt="vote down" title="This answer is not useful (click again to undo)">
+
+</div>
+
+        </td>
+        <td>
+            <div class="post-text"><p>You can either compare it using <a href="http://www.pythonware.com/products/pil/" rel="nofollow">PIL</a> (iterate through pixels / segments of the picture and compare) or if you're looking for a complete identical copy comparison, try comparing the MD5 hash of both files.</p>
+</div>
+            <table class="fw">
+            <tr>
+            <td class="vt">
+                <div class="post-menu"><a href="/questions/1927660/compare-two-images-the-python-linux-way/1927720#1927720" title="permalink to this answer">link</a><span class="lsep">|</span><a id="flag-post-1927720" title="flag this post for serious problems">flag</a></div>
+                
+            </td>
+            
+            <td align="right" class="post-signature">
+            <div class="user-info"><div class="user-action-time">answered <span title="2009-12-18 11:39:21Z" class="relativetime">Dec 18 at 11:39</span></div><div class="user-gravatar32"><a href="/users/140176/daniel-may"><img src="http://www.gravatar.com/avatar/aa77fd3fe53d767cbcc6696b8600d49d?s=32&amp;d=identicon&amp;r=PG" height="32" width="32" alt=""></a></div><div class="user-details"><a href="/users/140176/daniel-may" >Daniel May</a><br><span class="reputation-score" title="reputation score">2,084</span><span title="1 silver badge"><span class="badge2">&#9679;</span><span class="badgecount">1</span></span><span title="15 bronze badges"><span class="badge3">&#9679;</span><span class="badgecount">15</span></span></div></div>
+            </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+        
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1927720" class="comments dno">
+        <table>
+        <tbody>
+        
+            <tr><td></td><td></td></tr>
+        
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+        </table>
+    </div>
+
+
+    <a name="1928417"></a>
+    
+    <div id="answer-1928417" class="answer ">
+        
+        <table>
+        <tr>
+        <td class="votecell">
+            
+<div class="vote">
+    <input type="hidden" value="1928417">
+    <img class="vote-up"
+        src="http://sstatic.net/so/img/vote-arrow-up.png"
+        width="40" height="25"
+        alt="vote up" title="This answer is useful (click again to undo)">
+    <span class="vote-count-post">
+        0
+    </span>
+    <img class="vote-down"
+        src="http://sstatic.net/so/img/vote-arrow-down.png"
+        width="40" height="25"
+        alt="vote down" title="This answer is not useful (click again to undo)">
+
+</div>
+
+        </td>
+        <td>
+            <div class="post-text"><p>the problem of knowing what makes some features of the image more important than other is a whole scientific program. I would suggest some alternatives depending on the solution you want:</p>
+
+<ul>
+<li><p>if your problem is to see if there is a flipping of bits in your JPEGs, then try to image the difference image (there was perhaps a minor edit locally?),</p></li>
+<li><p>to see if images are globally the same, use the Kullback Leibler distance to compare your histograms,</p></li>
+<li><p>to see if you have some qualittative change, before applying other answers, filter your image using the functions below to raise the importance of high-level frequencies:</p></li>
+</ul>
+
+<p>code:</p>
+
+<pre><code>def FTfilter(image,FTfilter):
+    from scipy.fftpack import fft2, fftshift, ifft2, ifftshift
+    from scipy import real
+    FTimage = fftshift(fft2(image)) * FTfilter
+    return real(ifft2(ifftshift(FTimage)))
+    #return real(ifft2(fft2(image)* FTfilter))
+
+
+#### whitening
+def olshausen_whitening_filt(size, f_0 = .78, alpha = 4., N = 0.01):
+    """
+    Returns the whitening filter used by (Olshausen, 98)
+
+    f_0 = 200 / 512
+
+    /!\ you will have some problems at dewhitening without a low-pass
+
+    """
+    from scipy import mgrid, absolute
+    fx, fy = mgrid[-1:1:1j*size[0],-1:1:1j*size[1]]
+    rho = numpy.sqrt(fx**2+fy**2)
+    K_ols = (N**2 + rho**2)**.5 * low_pass(size, f_0 = f_0, alpha = alpha)
+    K_ols /= numpy.max(K_ols)
+
+    return  K_ols
+
+def low_pass(size, f_0, alpha):
+    """
+    Returns the low_pass filter used by (Olshausen, 98)
+
+    parameters from Atick (p.240)
+    f_0 = 22 c/deg in primates: the full image is approx 45 deg
+    alpha makes the aspect change (1=diamond on the vert and hor, 2 = anisotropic)
+
+    """
+
+    from scipy import mgrid, absolute
+    fx, fy = mgrid[-1:1:1j*size[0],-1:1:1j*size[1]]
+    rho = numpy.sqrt(fx**2+fy**2)
+    low_pass = numpy.exp(-(rho/f_0)**alpha)
+
+    return  low_pass
+</code></pre>
+
+<p>(shameless copy from <a href="http://www.incm.cnrs-mrs.fr/LaurentPerrinet/Publications/Perrinet08spie" rel="nofollow">http://www.incm.cnrs-mrs.fr/LaurentPerrinet/Publications/Perrinet08spie</a> )</p>
+</div>
+            <table class="fw">
+            <tr>
+            <td class="vt">
+                <div class="post-menu"><a href="/questions/1927660/compare-two-images-the-python-linux-way/1928417#1928417" title="permalink to this answer">link</a><span class="lsep">|</span><a id="flag-post-1928417" title="flag this post for serious problems">flag</a></div>
+                
+            </td>
+            
+            <td align="right" class="post-signature">
+            <div class="user-info"><div class="user-action-time">edited <a href="/posts/1928417/revisions" title="show all edits to this post"><span title="2009-12-19 11:52:55Z" class="relativetime">Dec 19 at 11:52</span></a></div><div class="user-gravatar32"></div><div class="user-details"><br></div></div>
+            </td>
+            
+            <td align="right" class="post-signature">
+            <div class="user-info"><div class="user-action-time">answered <span title="2009-12-18 14:12:21Z" class="relativetime">Dec 18 at 14:12</span></div><div class="user-gravatar32"><a href="/users/234547/meduz"><img src="http://www.gravatar.com/avatar/50bf61b4bb77d2f58ac27b2cdd0225dc?s=32&amp;d=identicon&amp;r=PG" height="32" width="32" alt=""></a></div><div class="user-details"><a href="/users/234547/meduz" >meduz</a><br><span class="reputation-score" title="reputation score">56</span><span title="4 bronze badges"><span class="badge3">&#9679;</span><span class="badgecount">4</span></span></div></div>
+            </td>
+            </tr>
+            </table>
+        </td>
+        </tr>
+        
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-1928417" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-1836979" class="comment">
+        <td></td>
+        <td class="comment-text"><div>would you mind formatting your code? &ndash;&nbsp;<a href="/users/64206/tgray" title="1384" class="comment-user">tgray</a> <span class="comment-date"><span title="2009-12-18 15:58:26Z">Dec 18 at 15:58</span></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+        </table>
+    </div>
+
+    <form id="post-form" action="/questions/1927660/answer/submit" method="post">
+        <h2 class="space">Your Answer</h2>
+        
+<script src="http://sstatic.net/so/Js/wmd.js?v=6016" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(function() { 
+        editorReady(1, heartbeat.answers);
+        $('#wmd-input').focus(function() { $('#how-to-tag').hide(); $('#how-to-format').fadeIn('slow'); $('#how-to-title').hide(); });
+    });   
+</script>
+
+<div id="post-editor">
+    
+
+    
+    <div id="wmd-container">
+        <div id="wmd-button-bar"></div>
+        <textarea id="wmd-input" name="post-text" cols="92" rows="15" tabindex="101"></textarea>
+    </div>
+
+
+    <div class="community-option">
+        <input id="communitymode" name="communitymode" type="checkbox" >
+        <label for="communitymode" title="community owned posts do not generate any reputation for the owner, have a lower reputation barrier for collaborative editing, and show only a revision history instead of a signature block">community wiki</label>
+    </div>
+
+    <div id="wmd-preview"></div>
+
+
+    <div id="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="509bdbf088962d0706c12e2d72abe134">
+        <input id="author" name="author" type="text">
+    </div>
+</div>   
+<div class="form-item">
+    <table>
+    <tr>
+    <td class="vm">
+        <label for="openid_identifier">OpenID Login</label>
+        <input id="openid_identifier" name="openid_identifier" class="openid-identifer" type="text" size="40" maxlength="200" value="" tabindex="104">
+        <div class="form-item-info">
+            Get an <a href="http://openid.net/get/" target="_blank">OpenID</a>
+        </div>
+    </td>
+
+    <td class="orcell">
+        <div class="orword">or</div>
+        <div class="orline"></div>
+    </td>
+    <td class="vm">
+        <div>
+            <label for="display-name">Name</label>
+            <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+        </div>
+        <div>
+            <label for="m-address">Email</label>
+            <input id="m-address" name="m-address" type="text" size="40" maxlength="100" value="" tabindex="106">
+            <span class="edit-field-overlay" style="color:#999; font-weight:normal">never shown</span>
+        </div>
+        <div>
+            <label for="home-page">Home Page</label>
+            <input id="home-page" name="home-page" type="text" size="40" maxlength="200" value="" tabindex="107">
+        </div>
+    </td>
+
+    </tr>
+    </table>
+</div>
+
+        
+        <div class="form-submit cbt"><input id="submit-button" type="submit" value="Post Your Answer" tabindex="110"></div>
+    </form>
+    
+    
+
+    <h2 class="space">
+        Not the answer you're looking for?
+        Browse other questions tagged <a href="/questions/tagged/python" class="post-tag" title="show questions tagged 'python'" rel="tag">python</a> <a href="/questions/tagged/linux" class="post-tag" title="show questions tagged 'linux'" rel="tag">linux</a> <a href="/questions/tagged/images" class="post-tag" title="show questions tagged 'images'" rel="tag">images</a>  or <a href="/questions/ask">ask your own question</a>.
+    </h2>
+</div>
+
+<img src="/posts/1927660/ivc/5956" class="dno" alt="">
+
+</div>
+
+<div id="sidebar" style="width:220px">
+
+
+<div class="module newuser" style="display:none">
+    <h4>Hello World!</h4>
+    <div>
+        <p>Stack Overflow is a <b>collaboratively edited question and answer site for programmers</b> &ndash; regardless of platform or language. It's 100% free, no registration required.</p>
+        <p class="tar"><a href="/about">about &raquo;</a>&nbsp;&nbsp;&nbsp;<a href="/faq">faq &raquo;</a></p>
+    </div>
+</div>
+    <div class="module" style="padding-bottom:1px">
+    <p class="label-key">tagged</p>
+    <div class="tagged">
+        <a href="/questions/tagged/python" class="post-tag" title="show questions tagged 'python'" rel="tag">python</a>&nbsp;<span class="item-multiplier">&times;&nbsp;17053</span><br>
+<a href="/questions/tagged/linux" class="post-tag" title="show questions tagged 'linux'" rel="tag">linux</a>&nbsp;<span class="item-multiplier">&times;&nbsp;5670</span><br>
+<a href="/questions/tagged/images" class="post-tag" title="show questions tagged 'images'" rel="tag">images</a>&nbsp;<span class="item-multiplier">&times;&nbsp;929</span><br>
+
+    </div> 
+    <p class="label-key">asked</p>
+    <p class="label-value" title="2009-12-18 11:27:38Z">1 month ago</p>
+    <p class="label-key">viewed</p>
+    <p class="label-value">247 times</p>
+
+    <p class="label-key">latest activity</p>
+    <p class="label-value" title="2009-12-19 11:52:55Z">1 month ago</p>
+
+    </div>
+
+    
+    <div class="everyonelovesstackoverflow">
+        <script type="text/javascript">
+            document.write('<s'+'cript lang' + 'uage="jav' + 'ascript" src="http://ads.stackoverflow.com/a.aspx?ZoneID=4&amp;Task=Get&amp;IFR=False&amp;PageID=52405&amp;SiteID=1&amp;Random=' + (+new Date()) + '&amp;Keywords=python,linux,images">'); 
+            document.write('</'+'scr'+'ipt>');
+        </script>
+        <noscript>
+            <div>
+            <a href="http://ads.stackoverflow.com/a.aspx?ZoneID=4&amp;Task=Click&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405">
+            <img src="http://ads.stackoverflow.com/a.aspx?ZoneID=4&amp;Task=Get&amp;Mode=HTML&amp;SiteID=1&amp;PageID=52405" alt="">
+            </a>
+            </div>
+        </noscript>
+    </div>
+
+    
+    <div class="welovestackoverflow">
+        <script type="text/javascript">
+            
+	document.write(
+	   '<strong>Wanted:</strong> ' +
+	   '<a href="http://jobs.stackoverflow.com/?6004">' +
+	   "Sr. Software Developers" +
+	   ' at ' +
+	   "Dotomi</a> (" +
+	   "Chicago, IL  60661" +
+	   '). See this and other great job listings at ' +
+	   '<a href="http://jobs.stackoverflow.com">jobs.stackoverflow.com</a>.');
+	
+        </script>
+    </div>
+    
+    <div class="module">
+    <h4>Related</h4>
+    <div class="related">
+    <div class="spacer">
+<a href="/questions/1106479/javascript-image-scroller-not-working-with-doctype" class="question-hyperlink">Javascript image scroller not working with DOCTYPE</a>
+</div>
+<div class="spacer">
+<a href="/questions/843801/degradable-html-layout-for-comparing-two-images" class="question-hyperlink">Degradable HTML layout for comparing two images</a>
+</div>
+<div class="spacer">
+<a href="/questions/23931/what-algorithm-to-compare-two-images" class="question-hyperlink">What algorithm to compare two images</a>
+</div>
+<div class="spacer">
+<a href="/questions/384759/pil-and-numpy" class="question-hyperlink">PIL and numpy</a>
+</div>
+<div class="spacer">
+<a href="/questions/1671984/how-can-you-dynamically-put-different-patterns-on-images-in-a-webpage" class="question-hyperlink">How can you dynamically put different patterns on images in a webpage . . </a>
+</div>
+<div class="spacer">
+<a href="/questions/1673803/how-to-save-an-image-from-sql-server-to-a-file-using-sql" class="question-hyperlink">How to save an image from SQL Server to a file using SQL</a>
+</div>
+<div class="spacer">
+<a href="/questions/1674932/preload-images-from-an-ajax-call" class="question-hyperlink">Preload images from an Ajax Call</a>
+</div>
+<div class="spacer">
+<a href="/questions/1664073/classloader-getresource-doesnt-work-from-jar-file" class="question-hyperlink">ClassLoader.getResource() doesn&rsquo;t work from .jar file</a>
+</div>
+<div class="spacer">
+<a href="/questions/1665555/how-to-show-captured-images-in-a-sequence-so-it-look-like-a-video" class="question-hyperlink">How  to show captured images in a sequence so it look like a video?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1650671/how-to-display-css-backgroundimage-when-the-source-redirects" class="question-hyperlink">How to display CSS backgroundImage when the source redirects?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1654090/whats-the-all-fit-header-to-show-images" class="question-hyperlink">What&rsquo;s the all fit header to show images?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1654726/where-to-save-html-and-images" class="question-hyperlink">Where to save HTML and Images?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1656037/dynamically-pulling-images-and-creating-links" class="question-hyperlink">Dynamically pulling images and creating links</a>
+</div>
+<div class="spacer">
+<a href="/questions/1658306/java-swing-read-many-images-files-without-memory-problems" class="question-hyperlink">Java Swing: Read many images files without memory problems?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1676307/vb-net-get-to-resources-of-a-referenced-project" class="question-hyperlink">vb.net: Get to resources of a referenced project</a>
+</div>
+<div class="spacer">
+<a href="/questions/1676538/performance-in-tables-with-binary-data-images" class="question-hyperlink">Performance in tables with binary data/images</a>
+</div>
+<div class="spacer">
+<a href="/questions/1678759/javascript-jquery-gallery-with-very-large-images-how-can-i-have-it-on-click-fad" class="question-hyperlink">Javascript/JQuery: Gallery with very large images. How can I have it on click fade out, load the next image, and then fade in w/ the new image?</a>
+</div>
+<div class="spacer">
+<a href="/questions/1680056/uiwebview-locally-save-images-and-just-load-html" class="question-hyperlink">UIWebView locally save images and just load html</a>
+</div>
+<div class="spacer">
+<a href="/questions/1683385/oscommerce-images-not-displaying" class="question-hyperlink">osCommerce images not displaying</a>
+</div>
+
+    </div>
+    </div>
+
+</div>
+
+<div id="mainbar-footer">    
+    
+<div id="feed-link">
+    <div id="feed-link-image"><a href="/feeds/question/1927660" title="feed of this question and its answers"><img src="http://sstatic.net/so/Img/feed-icon-small.png" width="14" height="14" alt="feed icon"></a></div>
+    <div id="feed-link-text"><a href="/feeds/question/1927660" title="feed of this question and its answers">question feed</a></div>
+</div>
+
+</div>
+
+
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div id="footer-menu">
+                <a href="/about">about</a> |
+                <a href="/faq">faq</a> |
+                <a href="http://blog.stackoverflow.com/">blog</a> |
+                <a href="http://itc.conversationsnetwork.org/series/stackoverflow.html">podcast</a> |
+                <a href="/privacy">privacy policy</a> |
+                <a href="http://ads.stackoverflow.com/a.aspx?ZoneID=0&amp;BannerID=323&amp;AdvertiserID=5&amp;CampaignID=194&amp;Task=Click&amp;SiteID=1">advertising info</a> |
+                <b><a href="mailto:team@stackoverflow.com">contact us</a></b> |
+                <b><a href="http://meta.stackoverflow.com">feedback always welcome</a></b>
+                <div id="footer-sites">
+                    <span style="color:#FE7A15;font-size:140%">&#9632;</span>&nbsp;<a href="http://stackoverflow.com">stackoverflow.com</a>&nbsp;&nbsp;
+                    <span style="color:#FE7A15;font-size:140%">&#9632;</span>&nbsp;<a href="http://careers.stackoverflow.com">careers</a>&nbsp;&nbsp;
+                    <span style="color:#E8272C;font-size:140%">&#9632;</span>&nbsp;<a href="http://serverfault.com">serverfault.com</a>&nbsp;&nbsp;
+                    <span style="color:#00AFEF;font-size:140%">&#9632;</span>&nbsp;<a href="http://superuser.com">superuser.com</a>&nbsp;&nbsp;
+                    <span style="color:#969696;font-size:140%">&#9632;</span>&nbsp;<a href="http://meta.stackoverflow.com">meta</a>&nbsp;&nbsp;
+                    <a href="http://www.howtogeek.com">howtogeek.com</a>&nbsp;&nbsp;
+                    <a href="http://doctype.com">doctype.com</a>
+                </div>
+            </div>
+            <div id="footer-flair">
+                <img src="http://sstatic.net/so/Img/footer-cc-wiki-peak-internet.png" width="168" height="67" alt="cc-wiki, PEAK Internet" usemap="#footermap">
+                <map name="footermap">
+                    <area href="http://creativecommons.org/licenses/by-sa/2.5/" alt="cc-wiki" title="Creative Commons: Attribution - Share Alike"
+                        coords="0,0,50,67">
+                    <area href="http://www.peakinternet.com/business/hosting/colocation-dedicated#" alt="PEAK Internet"
+                        title="powered by PEAK Internet dedicated server hosting" coords="62,0,168,67">
+                </map>
+                <div id="svnrev">svn revision: 6176</div>
+            </div>
+            <div id="copyright">
+                site design and logo is &copy; 2010 stackoverflow.com llc; 
+                user contributed content licensed under <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+        </div>
+    </div>
+    
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+    
+    <script type="text/javascript">
+        document.write(unescape("%3Cscript src='http://www.google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-5620270-1");
+        pageTracker._trackPageview();
+    </script>
+    <script type="text/javascript">
+        _qoptions = { qacct : "p-c1rF4kxgLUzNc" };
+    </script>
+    <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+        
+</body>
+</html>

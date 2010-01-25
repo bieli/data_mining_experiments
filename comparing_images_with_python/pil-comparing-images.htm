@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml"> <link rel="shortcut icon" href="/media/img/effbot.ico"> <link rel="stylesheet" href="/media/css/effbot-min.css" type="text/css" media="screen"> <link rel="stylesheet" href="/media/css/effbotprint-min.css" type="text/css" media="print"> <title>Comparing Two&nbsp;Images</title> <script type="text/javascript">effbot_page_id=181;</script> </head> <body> <div id="doc2" class="yui-t2"> <div id="hd"> <!-- header --> <!--
+<p style='color: #8f8f8f; background: #fff5bf; padding: 5px 10px;'> <b>2008-07-15:</b> Selected articles
+
+now have experimental "comment" links in the left column and at the bottom.
+You're welcome to use them for commenting and voting on articles.
+For a bit more on this, see <a
+href="http://effbot.slinkset.com/links/Welcome_to_discuss_effbot_org">this
+page</a>. /F
+</p>
+--> </div> <!-- hd --> <div id="bd"> <!-- body --> <div id="yui-main"> <div class="yui-b"> <div class="content"><div class="yui-g"> <h1 class="maintitle">Comparing Two&nbsp;Images</h1> </div> <!-- yui-g --><div class="yui-ge"><div class="yui-u first"><p class="mark">Fredrik Lundh | Updated March 17, 1997</p><h2 id="exact">Exact Comparison &#160;<a class="nav" href="#exact" title="bookmark!">#</a></h2><p>The quickest way to determine if two images have exactly the
+same contents is to get the difference between the two images,
+and then calculate the bounding box of the non-zero regions in
+this image. If the images are identical, all pixels in the
+difference image are zero, and the bounding box function returns <i>None</i>.
+</p><pre class="python">
+<span class="pykeyword">import</span> ImageChops
+
+<span class="pykeyword">def</span> <span class="pyfunction">equal</span>(im1, im2):
+    <span class="pykeyword">return</span> ImageChops.difference(im1, im2).getbbox() <span class="pykeyword">is</span> None</pre><h2 id="rms">Root-Mean-Square Difference&#160;<a class="nav" href="#rms" title="bookmark!">#</a></h2><p>To get a measure of how similar two images are, you can
+calculate the root-mean-square (RMS) value of the difference
+between the images. If the images are exactly identical, this
+value is zero. The following function uses the <i>difference</i>
+function, and then calculates the RMS value from the histogram of
+the resulting image. </p></div><div class="yui-u">&#160;</div></div><div class="yui-g"><pre class="python wide wide">
+<span class="pycomment"># Example: File: imagediff.py</span>
+
+<span class="pykeyword">import</span> ImageChops
+<span class="pykeyword">import</span> math, operator
+
+<span class="pykeyword">def</span> <span class="pyfunction">rmsdiff</span>(im1, im2):
+    <span class="pystring">"Calculate the root-mean-square difference between two images"</span>
+
+    h = ImageChops.difference(im1, im2).histogram()
+
+    <span class="pycomment"># calculate rms</span>
+    <span class="pykeyword">return</span> math.sqrt(reduce(operator.add,
+        map(<span class="pykeyword">lambda</span> h, i: h*(i**2), h, range(256))
+    ) / (float(im1.size[0]) * im1.size[1]))</pre></div><div class="yui-g"></div> <!-- yui-g --></div> <!-- content --> </div> <!-- yui-b --> </div> <!-- yui-main --> <div class="yui-b"> <div id='menu'> <ul> <li><b><a href="/" title="Go to effbot.org.">::: effbot.org</a></b></li> <li><b><a href="." title="Go to zone index page.">::: zone :::</a></b></li> </ul> <ul><li><b>::: contents</b></li></ul> <ul><li><ul><li><a href="#exact">Exact Comparison </a></li><li><a href="#rms">Root-Mean-Square Difference</a></li></ul></li></ul> </div> <!-- menu --> </div> <!-- yui-b --> </div> <!-- bd --> <div id="ft"> <!-- footer --> <p><a href="http://www.djangoproject.com/"><img src="/media/img/djangosite80x15_grey.gif" border="0" alt="A Django site." title="A Django site." style="vertical-align: bottom;"></a>
+this page was rendered by a <a href="http://www.djangoproject.com/">django</a> application in 0.02s 2010-01-25 08:15:17.878160.  hosted by <a href="http://www.webfaction.com/shared_hosting?affiliate=slab">webfaction</a>.</p> </div> <!-- ft --> </div> <!-- doc --> <script src="/media/js/effbot-min.js" type="text/javascript"> </script> </body> </html>

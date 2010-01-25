@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="jacob.css" type="text/css" />
+<link rel="stylesheet" href="page.css" type="text/css" />
+<link rel="stylesheet" href="exp.css" type="text/css" />
+<title>CVXMOD &ndash; Convex optimization software in Python</title>
+</head>
+<body>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2725246-2";
+urchinTracker();
+</script>
+<div id="fwtitle">
+<div id="toptitle">
+<h1>CVXMOD &ndash; Convex optimization software in Python</h1>
+</div>
+</div>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">CVXMOD</div>
+<div class="menu-item"><a href="index.html" class="current">Home</a></div>
+<div class="menu-item"><a href="quick.html">Quick&nbsp;examples</a></div>
+<div class="menu-item"><a href="install.html">Download/install</a></div>
+<div class="menu-item"><a href="revision.html">Version/bug&nbsp;info</a></div>
+<div class="menu-item"><a href="contact.html">Contact</a></div>
+<div class="menu-category">User&rsquo;s guide</div>
+<div class="menu-item"><a href="using.html">Getting&nbsp;started</a></div>
+<div class="menu-item"><a href="matrices.html">Matrices</a></div>
+<div class="menu-item"><a href="symbols.html">Symbols</a></div>
+<div class="menu-item"><a href="params.html">Params</a></div>
+<div class="menu-item"><a href="optvars.html">Optvars</a></div>
+<div class="menu-item"><a href="expressions.html">Expressions</a></div>
+<div class="menu-item"><a href="classification.html">Classification</a></div>
+<div class="menu-item"><a href="relations.html">Relations</a></div>
+<div class="menu-item"><a href="problems.html">Problems</a></div>
+<div class="menu-category">Reference</div>
+<div class="menu-item"><a href="builtinatoms.html">Built-in&nbsp;atoms</a></div>
+<div class="menu-item"><a href="sets.html">Set&nbsp;relations</a></div>
+<div class="menu-category">Experimental</div>
+<div class="menu-item"><a href="cvx.html">CVX&nbsp;code&nbsp;gen</a></div>
+<div class="menu-category">Examples</div>
+<div class="menu-item"><a href="cvxbook.html">cvxbook</a></div>
+</td>
+<td id="layout-content">
+<h2>Introduction</h2>
+<p>CVXMOD is a Python-based tool for expressing and solving convex optimization
+problems. It uses <a href="http://abel.ee.ucla.edu/cvxopt">CVXOPT</a> as its solver. It is
+developed by <a href="http://stanford.edu/~jacobm/">Jacob Mattingley</a>, as PhD work
+under <a href="http://stanford.edu/~boyd/">Stephen Boyd</a> at Stanford University.</p>
+<p>CVXMOD is primarily a modeling layer for <a href="http://abel.ee.ucla.edu/cvxopt">CVXOPT</a>. While it is possible to use CVXOPT directly, CVXMOD makes it faster
+and easier to build and solve problems. Advanced users who want to see or
+manipulate how their problems are being solved should consider using CVXOPT
+directly. Additional features are being added to CVXMOD beyond just modeling.
+These are currently experimental.</p>
+<p>CVXMOD has a similar design philosophy to <a href="http://stanford.edu/~boyd/cvx/">CVX</a>,
+a convex optimization modeling language for Matlab&reg;, and uses the principles of
+<a href="http://stanford.edu/~boyd/papers/disc_cvx_prog.html">disciplined convex
+programming</a>, as developed by Michael Grant, Stephen Boyd and Yinyu&nbsp;Ye.</p>
+<p><b>Current version:</b> v0.4.6, released 2008-10-21 (<a href="revision.html">see changes</a>).
+<a href="revision.html">Still in alpha</a>, so interface changes are possible.</p>
+<h2>Functionality</h2>
+<p>CVXMOD currently &lsquo;supports&rsquo;, to varying degrees in this alpha release:</p>
+<ul>
+<li><p>Symbolic convex analysis</p>
+</li>
+<li><p>Symbolically defined parameters</p>
+</li>
+<li><p>Minimization, maximization and feasibility problem objectives</p>
+</li>
+<li><p>Convex composition rules, including with some sign analysis</p>
+</li>
+<li><p>LP representable atoms such as <tt>sum</tt>, <tt>min</tt>, <tt>max</tt>, <tt>abs</tt>, <tt>norm1</tt>,
+<tt>norminf</tt>, <tt>pos</tt>, <tt>neg</tt></p>
+</li>
+<li><p>Nonlinear atoms such as <tt>norm</tt>, <tt>exp</tt>, <tt>log</tt>, <tt>entropy</tt>, <tt>kl</tt>
+(Kullback-Leibler divergence), <tt>sqrt</tt>, <tt>square</tt>, <tt>huber</tt> (Huber penalty
+function), <tt>power</tt>, <tt>inv</tt></p>
+</li>
+<li><p>Quadratic forms (<tt>quadform</tt>)</p>
+</li>
+<li><p>Sets such as <tt>norm2ball</tt>, <tt>norm1ball</tt>, <tt>norminfball</tt>, <tt>probsimp</tt></p>
+</li>
+<li><p>User-definable atoms and sets (currently without documentation)</p>
+</li>
+<li><p>SDPs</p>
+</li>
+<li><p>Sparsity (partially)</p>
+</li>
+</ul>
+<h2>License</h2>
+<p>Copyright &copy; 2006-2008 Jacob Mattingley and Stephen Boyd.</p>
+<p>CVXMOD is free software; you can redistribute it and/or modify it under the
+terms of the <a href="http://www.gnu.org/licenses/gpl-3.0.html">GNU General Public
+License</a> as published by the Free Software Foundation; either version 3 of the
+License, or (at your option) any later version.</p>
+<p>CVXMOD is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the <a href="http://www.gnu.org/licenses/gpl-3.0.html">GNU
+General Public License</a> for more details.</p>
+<div id="footer">
+<div id="footer-text">
+Page generated 2009-03-16 15:21:03 PDT, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,163 @@
+
+Notice: Use of undefined constant WITH_NORMALIZE - assumed 'WITH_NORMALIZE' in /tmp/cluster.php on line 9
+
+Warning: array_count_values(): Can only count STRING and INTEGER values! in /tmp/cluster.php on line 111
+
+Warning: array_count_values(): Can only count STRING and INTEGER values! in /tmp/cluster.php on line 111
+
+Warning: array_count_values(): Can only count STRING and INTEGER values! in /tmp/cluster.php on line 111
+
+Warning: array_count_values(): Can only count STRING and INTEGER values! in /tmp/cluster.php on line 111
+
+Warning: array_count_values(): Can only count STRING and INTEGER values! in /tmp/cluster.php on line 111
+
+Warning: array_count_values(): Can only count STRING and INTEGER values! in /tmp/cluster.php on line 111
+
+Warning: array_count_values(): Can only count STRING and INTEGER values! in /tmp/cluster.php on line 111
+
+Warning: array_count_values(): Can only count STRING and INTEGER values! in /tmp/cluster.php on line 111
+
+Warning: array_count_values(): Can only count STRING and INTEGER values! in /tmp/cluster.php on line 111
+
+Warning: array_count_values(): Can only count STRING and INTEGER values! in /tmp/cluster.php on line 111
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Notice: Undefined offset:  0 in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined offset:  1 in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Warning: Division by zero in /tmp/cluster.php on line 115
+
+Notice: Undefined index:   in /tmp/cluster.php on line 115
+
+Notice: Undefined offset:  0 in /tmp/cluster.php on line 115
+
+Notice: Undefined offset:  1 in /tmp/cluster.php on line 115
+array(2) {
+  ["centroids"]=>
+  array(3) {
+    [""]=>
+    array(2) {
+      [0]=>
+      float(0.48)
+      [1]=>
+      float(0.52)
+    }
+    [0]=>
+    array(2) {
+      [0]=>
+      int(940)
+      [1]=>
+      int(80)
+    }
+    [1]=>
+    array(2) {
+      [0]=>
+      int(442)
+      [1]=>
+      int(58)
+    }
+  }
+  [""]=>
+  array(10) {
+    [0]=>
+    string(9) "0.05,0.95"
+    [1]=>
+    string(7) "0.1,0.9"
+    [2]=>
+    string(7) "0.2,0.8"
+    [3]=>
+    string(9) "0.25,0.75"
+    [4]=>
+    string(9) "0.45,0.55"
+    [5]=>
+    string(7) "0.5,0.5"
+    [6]=>
+    string(9) "0.55,0.45"
+    [7]=>
+    string(9) "0.85,0.15"
+    [8]=>
+    string(7) "0.9,0.1"
+    [9]=>
+    string(9) "0.95,0.05"
+  }
+}

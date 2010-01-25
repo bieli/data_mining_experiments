@@ -1,0 +1,1410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>mixture</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://algorithmics.molgen.mpg.de/Static/Documentation/Pymix">PyMix - Python Mixture Package</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;mixture
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="mixture-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module mixture</h1><span class="codelink"><a href="mixture-pysrc.html">source&nbsp;code</a></span><br /><br />
+<p>PyMix - Python Mixture Package</p>
+  The PyMix library implements algorithms and data structures for data 
+  mining with finite mixture models. The framework is object oriented and 
+  organized in a hierarchical fashion.<br /><br />
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.DataSet-class.html" class="summary-name">DataSet</a><br />
+      Class DataSet is the central data object.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.MixtureError-class.html" class="summary-name">MixtureError</a><br />
+      Base class for mixture exceptions.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.InvalidPosteriorDistribution-class.html" class="summary-name">InvalidPosteriorDistribution</a><br />
+      Raised if an invalid posterior distribution occurs.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.InvalidDistributionInput-class.html" class="summary-name">InvalidDistributionInput</a><br />
+      Raised if a DataSet is found to be incompatible with a given 
+        MixtureModel.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.ConvergenceFailureEM-class.html" class="summary-name">ConvergenceFailureEM</a><br />
+      Raised if a DataSet is found to be incompatible with a given 
+        MixtureModel.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.ProbDistribution-class.html" class="summary-name">ProbDistribution</a><br />
+      Base class for all probability distributions.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.PriorDistribution-class.html" class="summary-name">PriorDistribution</a><br />
+      Prior distribution base class for the Bayesian framework
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.NormalDistribution-class.html" class="summary-name">NormalDistribution</a><br />
+      Univariate Normal Distribution
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.MultiNormalDistribution-class.html" class="summary-name">MultiNormalDistribution</a><br />
+      Multivariate Normal Distribution
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.ExponentialDistribution-class.html" class="summary-name">ExponentialDistribution</a><br />
+      Exponential distribution
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.UniformDistribution-class.html" class="summary-name">UniformDistribution</a><br />
+      UniformDistribution over a given intervall.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.MultinomialDistribution-class.html" class="summary-name">MultinomialDistribution</a><br />
+      Multinomial Distribution
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.DiscreteDistribution-class.html" class="summary-name">DiscreteDistribution</a><br />
+      This is the special case of a MultinomialDistribution with p = 
+        1, that is a simple univariate discrete distribution.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.DirichletPrior-class.html" class="summary-name">DirichletPrior</a><br />
+      Dirichlet distribution as Bayesian prior for 
+        MultinomialDistribution and derived .
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.NormalGammaPrior-class.html" class="summary-name">NormalGammaPrior</a><br />
+      Inverse-Gamma Normal distribution prior for univariate Normal 
+        distribution.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.DirichletMixturePrior-class.html" class="summary-name">DirichletMixturePrior</a><br />
+      Mixture of Dirichlet distributions prior for multinomial 
+        data.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.ProductDistributionPrior-class.html" class="summary-name">ProductDistributionPrior</a><br />
+      Prior for ProductDistribution objects.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.ProductDistribution-class.html" class="summary-name">ProductDistribution</a><br />
+      Class for joined distributions for a vector of random variables 
+        with (possibly) different types.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.MixtureModelPrior-class.html" class="summary-name">MixtureModelPrior</a><br />
+      Mixture model prior.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.MixtureModel-class.html" class="summary-name">MixtureModel</a><br />
+      Class for a context-specific independence (CSI) mixture 
+        models.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.CandidateMergeFAST-class.html" class="summary-name">CandidateMergeFAST</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.BayesMixtureModel-class.html" class="summary-name">BayesMixtureModel</a><br />
+      Bayesian mixture models
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.ConstrainedDataSet-class.html" class="summary-name">ConstrainedDataSet</a><br />
+      Extension of the DataSet object that can hold pairwise or label 
+        constraints in the objects.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.LabeledMixtureModel-class.html" class="summary-name">LabeledMixtureModel</a><br />
+      Class for a mixture model containing the label constrained 
+        version of the E-Step See A.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture.ConstrainedMixtureModel-class.html" class="summary-name">ConstrainedMixtureModel</a><br />
+      Class for a mixture model containing the pairwise constrained 
+        version of the E-Step
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#numerize" class="summary-sig-name">numerize</a>(<span class="summary-sig-arg">data</span>)</span><br />
+      Cast all elements in a list to numeric values.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#numerize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#remove_col" class="summary-sig-name">remove_col</a>(<span class="summary-sig-arg">matrix</span>,
+        <span class="summary-sig-arg">index</span>)</span><br />
+      Removes a column in a Python matrix (list of lists)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#remove_col">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="LMMfromMM"></a><span class="summary-sig-name">LMMfromMM</span>(<span class="summary-sig-arg">mm</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#LMMfromMM">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="CMMfromMM"></a><span class="summary-sig-name">CMMfromMM</span>(<span class="summary-sig-arg">mm</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#CMMfromMM">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#modelSelection" class="summary-sig-name">modelSelection</a>(<span class="summary-sig-arg">data</span>,
+        <span class="summary-sig-arg">models</span>)</span><br />
+      Computes model selection criterias NEC, BIC and AIC for a list of 
+      models.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#modelSelection">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#kl_dist" class="summary-sig-name">kl_dist</a>(<span class="summary-sig-arg">d1</span>,
+        <span class="summary-sig-arg">d2</span>)</span><br />
+      Kullback-Leibler divergence for two distributions.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#kl_dist">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#sym_kl_dist" class="summary-sig-name">sym_kl_dist</a>(<span class="summary-sig-arg">d1</span>,
+        <span class="summary-sig-arg">d2</span>)</span><br />
+      Symmetric Kullback-Leibler divergence for two distributions.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#sym_kl_dist">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#computeErrors" class="summary-sig-name">computeErrors</a>(<span class="summary-sig-arg">classes</span>,
+        <span class="summary-sig-arg">clusters</span>)</span><br />
+      For an array of class labels and an array of cluster labels 
+      compute true positives, false negatives, true negatives and false 
+      positives.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#computeErrors">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#sens_spec" class="summary-sig-name">sens_spec</a>(<span class="summary-sig-arg">tp</span>,
+        <span class="summary-sig-arg">fn</span>,
+        <span class="summary-sig-arg">tn</span>,
+        <span class="summary-sig-arg">fp</span>)</span><br />
+      Computes sensitivity and specificity.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#sens_spec">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="evaluate"></a><span class="summary-sig-name">evaluate</span>(<span class="summary-sig-arg">classes</span>,
+        <span class="summary-sig-arg">clusters</span>)</span><br />
+      Evalutate clustering.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#evaluate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#random_vector" class="summary-sig-name">random_vector</a>(<span class="summary-sig-arg">nr</span>,
+        <span class="summary-sig-arg">normal</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Returns a random probability vector of length 'nr'.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#random_vector">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="variance"></a><span class="summary-sig-name">variance</span>(<span class="summary-sig-arg">data</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#variance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#entropy" class="summary-sig-name">entropy</a>(<span class="summary-sig-arg">p</span>)</span><br />
+      Returns the Shannon entropy for the probilistic vector 'p'.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#entropy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_loglikelihood"></a><span class="summary-sig-name">get_loglikelihood</span>(<span class="summary-sig-arg">mix_model</span>,
+        <span class="summary-sig-arg">data</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#get_loglikelihood">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_posterior"></a><span class="summary-sig-name">get_posterior</span>(<span class="summary-sig-arg">mix_model</span>,
+        <span class="summary-sig-arg">data</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#get_posterior">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#sumlogs" class="summary-sig-name">sumlogs</a>(<span class="summary-sig-arg">a</span>)</span><br />
+      Given a Numeric.array a of log p_i, return log(sum p_i)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#sumlogs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#dict_intersection" class="summary-sig-name">dict_intersection</a>(<span class="summary-sig-arg">d1</span>,
+        <span class="summary-sig-arg">d2</span>)</span><br />
+      Computes the intersections between the key sets of two Python 
+      dictionaries.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#dict_intersection">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#writeMixture" class="summary-sig-name">writeMixture</a>(<span class="summary-sig-arg">model</span>,
+        <span class="summary-sig-arg">fileName</span>,
+        <span class="summary-sig-arg">silent</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Stores model parameters in file 'fileName'.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#writeMixture">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#readMixture" class="summary-sig-name">readMixture</a>(<span class="summary-sig-arg">fileName</span>)</span><br />
+      Reads model from file 'fileName'.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#readMixture">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#parseMix" class="summary-sig-name">parseMix</a>(<span class="summary-sig-arg">fileHandle</span>,
+        <span class="summary-sig-arg">mtype</span>,
+        <span class="summary-sig-arg">G</span>,
+        <span class="summary-sig-arg">pi</span>,
+        <span class="summary-sig-arg">compFix</span>,
+        <span class="summary-sig-arg">leaders</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">groups</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Parses a flat file for a mixture model.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#parseMix">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#parseProd" class="summary-sig-name">parseProd</a>(<span class="summary-sig-arg">fileHandle</span>,
+        <span class="summary-sig-arg">true_p</span>)</span><br />
+      Internal function.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#parseProd">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="parseMixPrior"></a><span class="summary-sig-name">parseMixPrior</span>(<span class="summary-sig-arg">fileHandle</span>,
+        <span class="summary-sig-arg">nr_dist</span>,
+        <span class="summary-sig-arg">structPrior</span>,
+        <span class="summary-sig-arg">nrCompPrior</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#parseMixPrior">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="parseDirichletMixPrior"></a><span class="summary-sig-name">parseDirichletMixPrior</span>(<span class="summary-sig-arg">fileHandle</span>,
+        <span class="summary-sig-arg">G</span>,
+        <span class="summary-sig-arg">M</span>,
+        <span class="summary-sig-arg">pi</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#parseDirichletMixPrior">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#parseFile" class="summary-sig-name">parseFile</a>(<span class="summary-sig-arg">fileHandle</span>)</span><br />
+      Internal function.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#parseFile">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="mixture-module.html#chomp" class="summary-sig-name">chomp</a>(<span class="summary-sig-arg">string</span>)</span><br />
+      Removes a newline character from the end of the string if 
+      present</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#chomp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sequence"></a><span class="summary-sig-name">sequence</span>(<span class="summary-sig-arg">next</span>,
+        <span class="summary-sig-arg">token</span>,
+        <span class="summary-sig-arg">end</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#sequence">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="atom"></a><span class="summary-sig-name">atom</span>(<span class="summary-sig-arg">next</span>,
+        <span class="summary-sig-arg">token</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#atom">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="simple_eval"></a><span class="summary-sig-name">simple_eval</span>(<span class="summary-sig-arg">source</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="mixture-pysrc.html#simple_eval">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="GSL_rng"></a><span class="summary-name">GSL_rng</span> = <code title="pygsl.rng.mt19937_1998()">pygsl.rng.mt19937_1998()</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="mixture-module.html#__warningregistry__" class="summary-name">__warningregistry__</a> = <code title="{('Python C API version mismatch for module rng: This Python has API v\
+ersion 1013, module rng has version 1012.',
+  &lt;type 'exceptions.RuntimeWarning'&gt;,
+  52): 1,
+ ('Python C API version mismatch for module sf: This Python has API ve\
+rsion 1013, module sf has version 1012.',
+  &lt;type 'exceptions.RuntimeWarning'&gt;,
+  52): 1}"><code class="variable-group">{</code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">Python C API version mismatch for mod</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="numerize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">numerize</span>(<span class="sig-arg">data</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#numerize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Cast all elements in a list to numeric values.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>data</code></strong> - list of data</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>list of processed data</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="remove_col"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">remove_col</span>(<span class="sig-arg">matrix</span>,
+        <span class="sig-arg">index</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#remove_col">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Removes a column in a Python matrix (list of lists)
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>matrix</code></strong> - Python list of lists</li>
+        <li><strong class="pname"><code>index</code></strong> - index of column to be removed</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>matrix with column deleted</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="modelSelection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">modelSelection</span>(<span class="sig-arg">data</span>,
+        <span class="sig-arg">models</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#modelSelection">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Computes model selection criterias NEC, BIC and AIC for a list of 
+  models.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>data</code></strong> - DataSet object</li>
+        <li><strong class="pname"><code>models</code></strong> - list of MixtureModel objects order with ascending number of 
+          components.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>list of optimal components number according to [NEC, BIC, 
+          AIC], in that order.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="kl_dist"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">kl_dist</span>(<span class="sig-arg">d1</span>,
+        <span class="sig-arg">d2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#kl_dist">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Kullback-Leibler divergence for two distributions. Only accept 
+  MultinomialDistribution and NormalDistribution objects for now.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>d1</code></strong> - MultinomialDistribution or NormalDistribution instance</li>
+        <li><strong class="pname"><code>d2</code></strong> - MultinomialDistribution or NormalDistribution instance</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>Kullback-Leibler divergence between input distributions</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="sym_kl_dist"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sym_kl_dist</span>(<span class="sig-arg">d1</span>,
+        <span class="sig-arg">d2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#sym_kl_dist">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Symmetric Kullback-Leibler divergence for two distributions. Only 
+  accept MultinomialDistribution and NormalDistribution objects for 
+  now.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>d1</code></strong> - MultinomialDistribution or NormalDistribution instance</li>
+        <li><strong class="pname"><code>d2</code></strong> - MultinomialDistribution or NormalDistribution instance</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>Symmetric Kullback-Leibler divergence between input 
+          distributions</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="computeErrors"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">computeErrors</span>(<span class="sig-arg">classes</span>,
+        <span class="sig-arg">clusters</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#computeErrors">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>For an array of class labels and an array of cluster labels compute 
+  true positives, false negatives, true negatives and false positives.</p>
+  <p>Assumes identical order of objects.</p>
+  Class and cluster labels can be arbitrary data types supporting '==' 
+  operator.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>classes</code></strong> - list of class labels (true labels)</li>
+        <li><strong class="pname"><code>clusters</code></strong> - list of cluster labels (predicted labels)</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>Ratios for true positives, false negatives, true negatives, 
+          false postitives   (tp, fn, tn, fp)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="sens_spec"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sens_spec</span>(<span class="sig-arg">tp</span>,
+        <span class="sig-arg">fn</span>,
+        <span class="sig-arg">tn</span>,
+        <span class="sig-arg">fp</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#sens_spec">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Computes sensitivity and specificity.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>tp</code></strong> - true positives</li>
+        <li><strong class="pname"><code>fn</code></strong> - false negatives</li>
+        <li><strong class="pname"><code>tn</code></strong> - true negatives</li>
+        <li><strong class="pname"><code>fp</code></strong> - false positives</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>(sens,spez)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="random_vector"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">random_vector</span>(<span class="sig-arg">nr</span>,
+        <span class="sig-arg">normal</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#random_vector">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Returns a random probability vector of length 'nr'. Can be used to 
+  generate random parametrizations of a multinomial distribution with M = 
+  'nr'.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>nr</code></strong> - lenght of output vector</li>
+        <li><strong class="pname"><code>normal</code></strong> - sum over output vector, default 1.0</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>list with random entries sampled from a uniform distribution 
+          on [0,1] and normalized to 'normal'</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="entropy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">entropy</span>(<span class="sig-arg">p</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#entropy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Returns the Shannon entropy for the probilistic vector 'p'.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p</code></strong> - 'numarray' vector that sums up to 1.0</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="sumlogs"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sumlogs</span>(<span class="sig-arg">a</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#sumlogs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  <p>Given a Numeric.array a of log p_i, return log(sum p_i)</p>
+  <p>Uses (assuming p_1 is maximal): log(\Sum p_i) = log(p_1) + log( 1 + 
+  \Sum_{i=2} exp(log(p_i) - log(p_1)))</p>
+  NOTE: The sumlogs functions returns the sum for values != -Inf
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="dict_intersection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dict_intersection</span>(<span class="sig-arg">d1</span>,
+        <span class="sig-arg">d2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#dict_intersection">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Computes the intersections between the key sets of two Python 
+  dictionaries. Returns another dictionary with the intersection as 
+  keys.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>d1</code></strong> - dictionary object</li>
+        <li><strong class="pname"><code>d2</code></strong> - dictionary object</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>dictionary with keys equal to the intersection of keys between
+          d1 and d2.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="writeMixture"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">writeMixture</span>(<span class="sig-arg">model</span>,
+        <span class="sig-arg">fileName</span>,
+        <span class="sig-arg">silent</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#writeMixture">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Stores model parameters in file 'fileName'.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>model</code></strong> - MixtureModel object</li>
+        <li><strong class="pname"><code>fileName</code></strong> - file name the model is to be written to</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="readMixture"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">readMixture</span>(<span class="sig-arg">fileName</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#readMixture">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Reads model from file 'fileName'.
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fileName</code></strong> - file to be read</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>MixtureModel object</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="parseMix"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">parseMix</span>(<span class="sig-arg">fileHandle</span>,
+        <span class="sig-arg">mtype</span>,
+        <span class="sig-arg">G</span>,
+        <span class="sig-arg">pi</span>,
+        <span class="sig-arg">compFix</span>,
+        <span class="sig-arg">leaders</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">groups</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#parseMix">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Parses a flat file for a mixture model. Internal function, is invoked 
+  from readMixture.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="parseProd"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">parseProd</span>(<span class="sig-arg">fileHandle</span>,
+        <span class="sig-arg">true_p</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#parseProd">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Internal function. Parses product distribution.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="parseFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">parseFile</span>(<span class="sig-arg">fileHandle</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#parseFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Internal function. Parses flat files.
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="chomp"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">chomp</span>(<span class="sig-arg">string</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mixture-pysrc.html#chomp">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </table>
+  
+  Removes a newline character from the end of the string if present
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>string</code></strong> - input string</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>the argument without tailing newline.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__warningregistry__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">__warningregistry__</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">{</code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">Python C API version mismatch for module rng: This Python has API v</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="variable-string">ersion 1013, module rng has version 1012.</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+  &lt;type 'exceptions.RuntimeWarning'&gt;<code class="variable-op">,</code>
+  52<code class="variable-group">)</code><code class="variable-op">: </code>1<code class="variable-op">,</code>
+ <code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">Python C API version mismatch for module sf: This Python has API ve</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="variable-string">rsion 1013, module sf has version 1012.</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+  &lt;type 'exceptions.RuntimeWarning'&gt;<code class="variable-op">,</code>
+  52<code class="variable-group">)</code><code class="variable-op">: </code>1<code class="variable-group">}</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://algorithmics.molgen.mpg.de/Static/Documentation/Pymix">PyMix - Python Mixture Package</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0beta1 on Thu Oct 11 11:50:23 2007
+    </td>
+    <td align="right" class="footer">
+      <a href="http://epydoc.sourceforge.net">http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie()
+  // -->
+</script>
+  
+</body>
+</html>

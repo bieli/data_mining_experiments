@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="description" content="Snipplr lets your store and share all of your commonly used pieces of code and HTML with other programmers and designers." />
+	<meta name="keywords" content="programming, code, repository, organize, share, store, source code, html, Snipplr, TextMate" />
+	<title>Compare two PIL images in Python - Python - Snipplr</title>
+	<link rel="search" type="application/opensearchdescription+xml" title="Snipplr" href="http://snipplr.com/snipplrsearch.xml" />
+	<link rel="stylesheet" type="text/css" href="/css/reset-min.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/fonts-min.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/minimal.css?r202" media="screen" title="small" />
+	<link rel="alternate stylesheet" type="text/css" href="/css/main.css?r203" media="screen" title="big" />
+	<link rel="stylesheet" type="text/css" href="/css/language-articles.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/gigs.css" media="screen" />
+
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/css/ie.css"/><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/css/ie7.css"/><![endif]-->
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="alternate" type="application/rss+xml" title="Snippet comments" href="/rss/comments/757/" />
+	<script src="/js/prototype.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+	<script src="/js/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/snipplr.js?20080408" type="text/javascript" language="javascript" charset="utf-8"></script>
+	<!--<script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>-->
+	<!--<script src="/js/ui/jquery.ui.all.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="/js/styleswitcher.js" type="text/javascript" charset="utf-8"></script>
+	<!--[if lte IE 6]><script src="http://www.savethedevelopers.org/say.no.to.ie.6.js"></script><![endif]-->
+			<meta name="y_key" content="4e3381b857c84292" /> 
+	<meta name="verify-v1" content="+s7/4Gg4D9MzhtxfVv1O2+KcZb30GWEwI8htcMQe0aE=" />
+</head>
+
+<body id="snippets">
+<div id="header">
+	<div class="container">
+		<a id="logo" href="/"></a>
+		
+		<div id="nav">
+			<ul>
+				<li class="snippets">
+					<a href="/">code snippets</a>
+
+										<ul class="secondary"> 
+						<li><a href="/all/">all code snippets</a>/</li>
+						
+									
+						<li><a href="/popular/">popular code snippets</a>/</li>
+						
+						<li><a href="/yours/">your code snippets</a></li>
+						
+											</ul>
+									</li>
+				<li class="developer">
+					<a href="/developer/">extras</a>
+									</li>
+				
+				<li class="about"><a href="http://raventools.com">marketing tools</a></li>
+
+				<li class="blog"><a href="/blog/">blog</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="subnav">
+	<div class="container">
+		<div id="switcher">
+			<span>Change style:</span>
+			<ul>
+				<li><a class="styleswitch" href="#" onclick="setActiveStyleSheet('big'); return false;">Big</a> / </li>
+				<li><a class="styleswitch" href="#" onclick="setActiveStyleSheet('small'); return false;">Small</a></li>
+			</ul>
+		</div> 
+		<ul>
+			<li><a href="/new/" class="first">New Snippet</a>/</li>
+			
+			
+			
+					<li><a href="/login/">Login</a></li>
+			</ul>
+	</div>
+</div>
+
+<div id="stripe">
+	<div class="container">
+		<form name="search" action="/search.php" method="get" accept-charset="utf-8" class="search">
+			<p>
+				<input type="text" name="q" value="search" id="search" onclick="clearOnce();" /> 
+				<input type="submit" name="btnsearch" value="go" class="submit-min" />
+				<a href="/search.php?advanced" class="advsearch"><strong>advanced code snippet search</strong></a>
+			</p>
+		</form>
+	</div>
+</div>
+	<!-- main content area of site -->
+
+		<div id="body">
+			<div class="container">
+				<div id="sidecol">
+					<h2>We Recommend</h2>
+<div id="recommendation" class="noext">
+<p><a rel="nofollow" href="http://www.amazon.com/dp/0596513984/ref=nosim?tag=snipplr-20" onClick="javascript: pageTracker._trackPageview('/outgoing/amazon.com');"><img src="/bookcovers/bookpy1.jpg" alt="Learning Python" /></a>
+<strong><a rel="nofollow" href="http://www.amazon.com/dp/0596513984/ref=nosim?tag=snipplr-20" onClick="javascript: pageTracker._trackPageview('/outgoing/amazon.com');">Learning Python</a></strong><br/>
+The authors of Learning Python show you enough essentials of the Python scripting language to enable you to begin solving problems right away, then reveal more powerful aspects of the language one at a time. This approach is sure to appeal to programmers and system administrators who have urgent problems and a preference for learning by semi-guided experimentation.</p>
+</div>
+<div class="clear"></div>					<hr class="heavy" />
+					<h2>Posted By</h2>
+					<p><a href='/users/sudarkoff/'>sudarkoff</a> on 08/09/06</p>
+					<br/>
+								
+					<h2>Tagged</h2>
+					<p><a href='/users/sudarkoff/tags/python/'>python</a> <a href='/users/sudarkoff/tags/image-processing/'>image-processing</a> <a href='/users/sudarkoff/tags/PIL/'>PIL</a> <a href='/users/sudarkoff/tags/RMS/'>RMS</a> <a href='/users/sudarkoff/tags/difference/'>difference</a> </p>
+					<br/>		
+				
+					<h2>Versions (<a href='/faq/'>?</a>)</h2>
+					<p><select name='pversion' id='pversion' onchange='versionjump(757, this.value)'><option value='1002' selected>08/09/06 08:42am</option></select> <!--<a href='/view/757.1002/?deleteRevision'>delete revision</a>--></p>
+					<br/>
+				
+									
+					<h2>Who likes this?</h2><p>3 people have marked this snippet as a favorite</p><p><a href='/users/mthorn/'>mthorn</a><br/><a href='/users/anayhk/'>anayhk</a><br/><a href='/users/FSX/'>FSX</a><br/></p><br/>				
+										
+				</div>
+
+				<div id="maincol">
+					<div class="post">
+						<h1>Compare two PIL images in Python</h1>
+						
+																	</div>
+					<hr class="dotted" />
+
+					<p class="nomarg"><span class="rgt">Published in: Python</span>&nbsp;</p>
+					<hr class="dotted marg" />
+					
+					<p>URL: <a href='http://mail.python.org/pipermail/image-sig/1997-March/000223.html' rel='external nofollow'>http://mail.python.org/pipermail/image-sig/1997-March/000223.html</a></p>					<div class="description"></div>
+					
+					<div id="viewsource">
+											<div class="sourcenav"><span class="rgt"><a href="#" onclick="$('embed_div').toggle();$('embed_code').focus();$('embed_code').select();return false;">Embed</a> | <a rel="nofollow" href="/view.php?codeview&amp;id=757">Plain Text</a></span><a href="javascript:expand();" id="toggleexpand">Expand</a> <!-- / <a href="javascript:wraplines();">Wrap</a> --></div>
+						<div id="innersource" class="nowrap">
+							<div style="display:none;float:right;color:black;" id="embed_div"><input style="border:2px solid #3299C6;padding:1px"id="embed_code" readonly="1" type="text" value="&lt;div id=&quot;snipplr_embed_757&quot; class=&quot;snipplr_embed&quot;&gt;&lt;a href=&quot;http://snipplr.com/view/757/compare-two-pil-images-in-python/&quot;&gt;Code snippet - Compare two PIL images in Python&lt;/a&gt; on Snipplr&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;http://snipplr.com/js/embed.js&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;http://snipplr.com/json/757&quot;&gt;&lt;/script&gt;" onclick="this.select();" size="35" /><br /><em>Copy this code and paste it in your HTML</em></div>
+							<pre class="python python" style="font-family:monospace;"><ol><li class="li1"><div class="de1">h1 = Image.<span class="kw2">open</span><span class="br0">&#40;</span><span class="st0">&quot;image1&quot;</span><span class="br0">&#41;</span>.<span class="me1">histogram</span><span class="br0">&#40;</span><span class="br0">&#41;</span></div></li><li class="li1"><div class="de1">h2 = Image.<span class="kw2">open</span><span class="br0">&#40;</span><span class="st0">&quot;image2&quot;</span><span class="br0">&#41;</span>.<span class="me1">histogram</span><span class="br0">&#40;</span><span class="br0">&#41;</span></div></li><li class="li1"><div class="de1">&nbsp;</div></li><li class="li1"><div class="de1">rms = <span class="kw3">math</span>.<span class="me1">sqrt</span><span class="br0">&#40;</span><span class="kw2">reduce</span><span class="br0">&#40;</span><span class="kw3">operator</span>.<span class="me1">add</span>,</div></li><li class="li1"><div class="de1">	<span class="kw2">map</span><span class="br0">&#40;</span><span class="kw1">lambda</span> a,b: <span class="br0">&#40;</span>a-b<span class="br0">&#41;</span><span class="sy0">**</span><span class="nu0">2</span>, h1, h2<span class="br0">&#41;</span><span class="br0">&#41;</span>/<span class="kw2">len</span><span class="br0">&#40;</span>h1<span class="br0">&#41;</span><span class="br0">&#41;</span></div></li></ol></pre>						</div>
+					
+						
+					</div>
+					
+										<p><span class="rgt" id="spam"><a href="#" onclick="alert('You must be logged in to report a snippet.');" title="Use this to report spam">Report this snippet</a></span>&nbsp;</p>
+										                    
+			
+											<h2>Comments</h2><a href='/rss/comments/757/'><img src="/images/rss.png" alt="RSS Icon" title="RSS Feed for Comments"/> Subscribe to comments</a>
+						<hr class="heavy"/>
+						<dl class="comments marg"><dt><span class="smaller">Posted By: <a href="/users/rawlyn">rawlyn</a> on May 22, 2009</span></dt><dd><p>It's worth noting that this method only compares the histograms of the images, and not  the images themselves. The title is extremely misleading.</p>
+</dd></dl>										<div id="snippetcomment">
+											<p><label for="comment">Comment:</label></p>
+						<p><textarea name="comment" id="comment" rows="8" cols="40" class="inactive"></textarea></p>
+					<div id="message"><p>You need to <a href='/login/'>login</a> to post a comment.</p></div>
+										</div>
+					
+				</div>
+		<div class="clear"></div>
+	</div>
+	</div>
+	
+<div id="footernav">
+	<div class="container">
+		<ul>
+			<li><a href="/" class="first">Code Snippets</a>/</li>
+			
+			<li><a href="/developer/">Extras</a>/</li>
+			
+			<li><a href="http://raventools.com/">Internet Marketing Tools</a>/</li>
+
+			<li><a href="/blog/">Snipplr Blog</a>/</li>
+			
+			<li><a href="/about/">About Snipplr</a></li>
+			
+			
+		</ul>
+	</div>
+</div>
+
+<div class="container" id="footer">
+	<h3>Choose a language for easy browsing:</h3>
+	<ul class="languages">
+		<li><a href="/all/language/actionscript">ActionScript</a></li>
+<li><a href="/all/language/actionscript-3">ActionScript 3</a></li>
+<li><a href="/all/language/apache">Apache</a></li>
+<li><a href="/all/language/applescript">AppleScript</a></li>
+<li><a href="/all/language/asp">ASP</a></li>
+<li><a href="/all/language/assembler">Assembler</a></li>
+<li><a href="/all/language/autoit">AutoIt</a></li>
+<li><a href="/all/language/bash">Bash</a></li>
+<li><a href="/all/language/c">C</a></li>
+<li><a href="/all/language/c-sharp">C#</a></li>
+<li><a href="/all/language/c-plus-plus">C++</a></li>
+<li><a href="/all/language/clojure">Clojure</a></li>
+<li><a href="/all/language/cold-fusion">ColdFusion</a></li>
+<li><a href="/all/language/css">CSS</a></li>
+<li><a href="/all/language/delphi">Delphi</a></li>
+<li><a href="/all/language/diff">Diff</a></li>
+<li><a href="/all/language/django">Django</a></li>
+<li><a href="/all/language/dos">DOS Batch</a></li>
+<li><a href="/all/language/emacs-lisp">Emacs Lisp</a></li>
+<li><a href="/all/language/ez-publish">eZ Publish</a></li>
+<li><a href="/all/language/forth">Forth</a></li>
+<li><a href="/all/language/fortran">Fortran</a></li>
+<li><a href="/all/language/groovy">Groovy</a></li>
+<li><a href="/all/language/haml">HAML</a></li>
+<li><a href="/all/language/haskell">Haskell</a></li>
+<li><a href="/all/language/html">HTML</a></li>
+<li><a href="/all/language/iphone">iPhone</a></li>
+<li><a href="/all/language/java">Java</a></li>
+<li><a href="/all/language/javascript">JavaScript</a></li>
+<li><a href="/all/language/jquery">jQuery</a></li>
+<li><a href="/all/language/latex">LaTeX</a></li>
+<li><a href="/all/language/lighttpd">lighttpd</a></li>
+<li><a href="/all/language/lisp">Lisp</a></li>
+<li><a href="/all/language/lua">Lua</a></li>
+<li><a href="/all/language/make">Makefile</a></li>
+<li><a href="/all/language/matlab">MatLab</a></li>
+<li><a href="/all/language/maxscript">Maxscript</a></li>
+<li><a href="/all/language/mxml">MXML</a></li>
+<li><a href="/all/language/mysql">MySQL</a></li>
+<li><a href="/all/language/newtonscript">NewtonScript</a></li>
+<li><a href="/all/language/objective-c">Objective C</a></li>
+<li><a href="/all/language/open-firmware">Open Firmware</a></li>
+<li><a href="/all/language/other">Other</a></li>
+<li><a href="/all/language/pascal">Pascal</a></li>
+<li><a href="/all/language/perl">Perl</a></li>
+<li><a href="/all/language/php">PHP</a></li>
+<li><a href="/all/language/picbasic">PicBasic</a></li>
+<li><a href="/all/language/plsql">PL/SQL</a></li>
+<li><a href="/all/language/processing">Processing</a></li>
+<li><a href="/all/language/prolog">Prolog</a></li>
+<li><a href="/all/language/pseudocode">Pseudocode</a></li>
+<li><a href="/all/language/python">Python</a></li>
+<li><a href="/all/language/r">R</a></li>
+<li><a href="/all/language/rails">Rails</a></li>
+<li><a href="/all/language/regex">Regular Expression</a></li>
+<li><a href="/all/language/revolution">Revolution</a></li>
+<li><a href="/all/language/ruby">Ruby</a></li>
+<li><a href="/all/language/sas">SAS</a></li>
+<li><a href="/all/language/sass">SASS</a></li>
+<li><a href="/all/language/scala">Scala</a></li>
+<li><a href="/all/language/scheme">Scheme</a></li>
+<li><a href="/all/language/smalltalk">SmallTalk</a></li>
+<li><a href="/all/language/smarty">Smarty</a></li>
+<li><a href="/all/language/sml">SML</a></li>
+<li><a href="/all/language/spss">SPSS</a></li>
+<li><a href="/all/language/sql">SQL</a></li>
+<li><a href="/all/language/svn">SVN</a></li>
+<li><a href="/all/language/tcl">TCL</a></li>
+<li><a href="/all/language/textpattern">Textpattern</a></li>
+<li><a href="/all/language/typo3">TYPO3</a></li>
+<li><a href="/all/language/vbnet">VB.NET</a></li>
+<li><a href="/all/language/vhdl">VHDL</a></li>
+<li><a href="/all/language/visual-basic">Visual Basic</a></li>
+<li><a href="/all/language/w-language">W-Language</a></li>
+<li><a href="/all/language/windows-powershell">Windows PowerShell</a></li>
+<li><a href="/all/language/windows-registry">Windows Registry</a></li>
+<li><a href="/all/language/xhtml">XHTML</a></li>
+<li><a href="/all/language/xml">XML</a></li>
+<li><a href="/all/language/xslt">XSLT</a></li>
+	</ul>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-88442-11");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+_qoptions={
+qacct:"p-06rj6jbJyYcwU"
+};
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-06rj6jbJyYcwU.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast tag --></body>
+</html>

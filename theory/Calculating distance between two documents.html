@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head profile="http://gmpg.org/xfn/11">
+
+<!-- Meta Properties -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="WordPress 2.7.1" />
+
+<meta name="description" content="All about PHP, Artificial Intelligence and not too much about me." />
+<!-- Add Keywords, etc.-->
+
+<title>  Calculating distance between two documents  ::  PHP And Me</title>
+
+<!-- Add Stylesheets for screen,print,etc.-->
+<link rel="stylesheet" type="text/css" media="screen" href="http://www.phpandme.net/wp-content/themes/pressbox-limited-1.3/style.css" />
+<link rel="stylesheet" type="text/css" media="print" href="http://www.phpandme.net/wp-content/themes/pressbox-limited-1.3/styles/print.css" />
+<!--[if gt IE 6]><link rel="stylesheet" type="text/css" href="http://www.phpandme.net/wp-content/themes/pressbox-limited-1.3/styles/iehacks.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="http://www.phpandme.net/wp-content/themes/pressbox-limited-1.3/userstyles.css" />
+<!--[if lt IE 7]> <style>div.magazine-thing * {width:38.39em; overflow:hidden;}</style> <![endif]-->
+
+<!-- Blog Specific Stuff like rss and pingback.-->
+<link rel="alternate" type="application/rss+xml" title="PHP And Me RSS Feed" href="http://www.phpandme.net/feed/" />
+<link rel="pingback" href="http://www.phpandme.net/xmlrpc.php" />
+
+<!-- Scripts (mostly plugins, etc.)-->
+
+
+<!-- Generated-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.phpandme.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.phpandme.net/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 2.7.1" />
+
+
+<link rel="stylesheet" href="http://www.phpandme.net/wp-content/plugins/wp-syntax/wp-syntax.css" type="text/css" media="screen" />
+
+<style>
+
+</style>
+</head>
+
+<body id="recycledblog"  >	
+	<div id="topbar" > 
+		<div id="topbar-inner">
+			<ul id="menu" class="left">
+				<li id="title-menu"><a style="background-color:#ff0000; color:#ffffff;" href="http://www.phpandme.net">PHP And Me</a> - </li>
+				
+				<li class="page_item page-item-2"><a href="http://www.phpandme.net/about/" title="About">About</a></li>
+ 
+				<li><a href="http://www.phpandme.net/feed/">Feed</a></li> <li><img alt="RSS Feed Icon" src="http://www.phpandme.net/wp-content/themes/pressbox-limited-1.3/images/feed.png" style="vertical-align:top; display:inline; border:none;"/></li>
+			</ul>		
+			<div id="extra-menu" class="right">
+				<span><a href="http://www.phpandme.net/wp-login.php">Log in</a></span>  <span> | </span>
+				<span><a href="#content">Jump</a> | </span> 
+  <form id="searchbox" class="searchform" action="http://www.phpandme.net">
+	<fieldset>
+    <input id="search-input" name="s" type="text"  />
+    <input type="submit" id="search-button" alt="search" value="Search" />
+	</fieldset>
+  </form>
+
+			</div> 
+		
+		</div>
+
+	</div>
+		
+	<div id="wrapper" >
+
+	<div id="page">		
+									<div id="headerblock">
+								<h2 ><span id="title-front" style="background-color:#ff0000;"><a style="color:#ffffff;" href="http://www.phpandme.net">PHP</a></span> <span id="title-rest"><a href="http://www.phpandme.net">And Me</a></span>
+				</h2>				<div id="header-secondary" >
+
+					<div class="left">All about PHP, Artificial Intelligence and not too much about me.</div>
+					<div class="right"><!-- put something here if you'd like--></div>
+					<div class="clear"></div>					
+								
+				</div>
+			</div>
+						
+		</div>				
+			
+<div id="content">
+	
+	<div id="thing-page">					  	  
+			
+			<!-- google_ad_section_start -->					
+				<div class="thing-wrap" id="thing-56">								
+					<div id="thing-top">
+						<h1><a href="http://www.phpandme.net/2009/03/calculating-distance-between-two-documents/" rel="bookmark" title="Permanent Link: Calculating distance between two documents">Calculating distance between two documents</a></h1>
+				
+					</div>
+					<div id="minibar" >
+	
+	<h4>About PHP And Me</h4>
+	<p>All about PHP, Artificial Intelligence and not too much about me.</p>
+	<h4>Feed Subscriptions</h4>
+	<p><img src="http://www.phpandme.net/wp-content/themes/pressbox-limited-1.3/images/feed-icon-28x28.png" alt="RSS Feed" class="left padded"/><a href="http://www.phpandme.net/feed/">RSS Things</a><br/><a href="http://www.phpandme.net/comments/feed/">RSS Comments</a></p>
+
+	<div id="linkcat-2" class="widget %2$s"><h4>Blogroll</h4>
+	<ul class='xoxo blogroll'>
+<li><a href="http://andrewchenblog.com/" title="Startup, business related.">Andrew Chen</a></li>
+<li><a href="http://blog.guykawasaki.com/" title="Startup, business related." target="_blank">Guy Kawasaki</a></li>
+<li><a href="http://blog.scrobbld.com/" title="Ebay &amp; PayPal hints, tips and tricks." target="_blank">Scrobbld blog</a></li>
+<li><a href="http://techcrunch.com/" title="Tech startup blog" target="_blank">TechCrunch</a></li>
+<li><a href="http://www.wastedmonkeys.com/" title="Tech and miscellaneous" target="_blank">Wasted Monkeys</a></li>
+
+	</ul>
+</div>
+		<div id="%1$s" class="widget %2$s"><h4>Archives</h4>		<ul>
+			<li><a href='http://www.phpandme.net/2009/09/' title='September 2009'>September 2009</a></li>
+	<li><a href='http://www.phpandme.net/2009/03/' title='March 2009'>March 2009</a></li>
+		</ul>
+</div>	<div id="%1$s" class="widget %2$s"><h4>Tags</h4><a href='http://www.phpandme.net/tag/abstract-class/' class='tag-link-26' title='1 topic' rel="tag" style='font-size: 8pt;'>abstract class</a>
+<a href='http://www.phpandme.net/tag/ai/' class='tag-link-8' title='1 topic' rel="tag" style='font-size: 8pt;'>ai</a>
+<a href='http://www.phpandme.net/tag/base-class/' class='tag-link-28' title='1 topic' rel="tag" style='font-size: 8pt;'>base class</a>
+<a href='http://www.phpandme.net/tag/bayes/' class='tag-link-3' title='2 topics' rel="tag" style='font-size: 15pt;'>Bayes</a>
+<a href='http://www.phpandme.net/tag/bayesian/' class='tag-link-9' title='1 topic' rel="tag" style='font-size: 8pt;'>bayesian</a>
+<a href='http://www.phpandme.net/tag/clustering/' class='tag-link-23' title='1 topic' rel="tag" style='font-size: 8pt;'>clustering</a>
+<a href='http://www.phpandme.net/tag/demo/' class='tag-link-12' title='1 topic' rel="tag" style='font-size: 8pt;'>demo</a>
+<a href='http://www.phpandme.net/tag/disambiguation/' class='tag-link-18' title='1 topic' rel="tag" style='font-size: 8pt;'>disambiguation</a>
+<a href='http://www.phpandme.net/tag/documents/' class='tag-link-21' title='1 topic' rel="tag" style='font-size: 8pt;'>documents</a>
+<a href='http://www.phpandme.net/tag/email/' class='tag-link-24' title='1 topic' rel="tag" style='font-size: 8pt;'>email</a>
+<a href='http://www.phpandme.net/tag/euclidean-distance/' class='tag-link-19' title='1 topic' rel="tag" style='font-size: 8pt;'>euclidean distance</a>
+<a href='http://www.phpandme.net/tag/intelligent-filter/' class='tag-link-25' title='1 topic' rel="tag" style='font-size: 8pt;'>intelligent filter</a>
+<a href='http://www.phpandme.net/tag/k-means/' class='tag-link-22' title='1 topic' rel="tag" style='font-size: 8pt;'>K Means</a>
+<a href='http://www.phpandme.net/tag/mahalanobis/' class='tag-link-20' title='1 topic' rel="tag" style='font-size: 8pt;'>mahalanobis</a>
+<a href='http://www.phpandme.net/tag/mysql/' class='tag-link-5' title='2 topics' rel="tag" style='font-size: 15pt;'>MySQL</a>
+<a href='http://www.phpandme.net/tag/numeric/' class='tag-link-16' title='1 topic' rel="tag" style='font-size: 8pt;'>numeric</a>
+<a href='http://www.phpandme.net/tag/php/' class='tag-link-4' title='3 topics' rel="tag" style='font-size: 22pt;'>PHP</a>
+<a href='http://www.phpandme.net/tag/php5/' class='tag-link-27' title='1 topic' rel="tag" style='font-size: 8pt;'>php5</a>
+<a href='http://www.phpandme.net/tag/spam-filtering/' class='tag-link-10' title='2 topics' rel="tag" style='font-size: 15pt;'>spam filtering</a>
+<a href='http://www.phpandme.net/tag/stdclass/' class='tag-link-29' title='1 topic' rel="tag" style='font-size: 8pt;'>stdClass</a>
+<a href='http://www.phpandme.net/tag/tfidf/' class='tag-link-14' title='2 topics' rel="tag" style='font-size: 15pt;'>TFIDF</a>
+<a href='http://www.phpandme.net/tag/tokens/' class='tag-link-17' title='1 topic' rel="tag" style='font-size: 8pt;'>tokens</a>
+<a href='http://www.phpandme.net/tag/training-data/' class='tag-link-13' title='1 topic' rel="tag" style='font-size: 8pt;'>training data</a>
+<a href='http://www.phpandme.net/tag/weighting/' class='tag-link-15' title='1 topic' rel="tag" style='font-size: 8pt;'>weighting</a></div>			<div id="%1$s" class="widget %2$s">			<h4>Meta</h4>			<ul>
+						<li><a href="http://www.phpandme.net/wp-login.php">Log in</a></li>
+			<li><a href="http://www.phpandme.net/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.phpandme.net/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+		</div>
+	
+  
+	</div>
+					
+					<div class="thing-content">
+
+							<div class="thing-meta">
+								This thing was constructed on March 8, 2009, and it was categorized as <a href="http://www.phpandme.net/category/classification/" title="View all posts in Classification" rel="category tag">Classification</a>,  <a href="http://www.phpandme.net/category/php/" title="View all posts in PHP" rel="category tag">PHP</a>.<br/>You can follow comments through the <a href='http://www.phpandme.net/2009/03/calculating-distance-between-two-documents/feed/'>RSS 2.0</a> feed. 
+
+	You can <a href="#respond">leave a comment</a>, or <a href="http://www.phpandme.net/2009/03/calculating-distance-between-two-documents/trackback/" rel="trackback">trackback</a>.
+
+		
+							</div>
+							<p>A &#8216;distance&#8217; between documents. Granted, an odd concept, however one that works reasonably well. After you have converted your document into a bag of words, <a href="http://www.phpandme.net/tfidf-weighting/">assigning a numerical value to each token</a>, you can then calculate the distance between two of these documents.</p>
+<p>Imagine a 3D vector space, which is where a single document resides. This vector space also contains all your other documents, at a particular distance from one another. But this would be the case if your document only contained 3 tokens. If it contains 20 tokens, then you would have to consider a 20D vector space. So, a vector space is usually referred to as n-dimensional. Furthermore, you can only calculate the distance between the same token in two different documents. </p>
+<p>The most common is Euclidean distance, and is the one that will be discussed here. <a href="http://en.wikipedia.org/wiki/Mahalanobis_distance">Mahalanobis distance is another measure</a>, which has the advantage of being unaffected by scale (scale invariant), which is not an issue here as tf*idf values are normalised, but is also a bit more computationally intensive.</p>
+
+<div class="wp_syntax"><div class="code"><pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">function</span> euclideanDistance<span style="color: #009900;">&#40;</span><span style="color: #990000;">array</span> <span style="color: #000088;">$objectX</span><span style="color: #339933;">,</span> <span style="color: #990000;">array</span> <span style="color: #000088;">$objectY</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+	<span style="color: #666666; font-style: italic;">// Assuming we're dealing with two associative arrays.</span>
+	<span style="color: #666666; font-style: italic;">// $objectX[token] = tfidf</span>
+	<span style="color: #000088;">$missingValue</span> <span style="color: #339933;">=</span> <span style="color:#800080;">0.0001</span><span style="color: #339933;">;</span>
+	<span style="color: #000088;">$dist</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span>
+	<span style="color: #000088;">$tokens</span> <span style="color: #339933;">=</span> <span style="color: #990000;">array_keys</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">array_merge</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$objectX</span><span style="color: #339933;">,</span> <span style="color: #000088;">$objectY</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	<span style="color: #b1b100;">foreach</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$tokens</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$token</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+		<span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #339933;">!</span><span style="color: #990000;">isset</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$objectY</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$token</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span> <span style="color: #000088;">$objectY</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$token</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$missingValue</span><span style="color: #339933;">;</span> <span style="color: #009900;">&#125;</span>		
+		<span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #339933;">!</span><span style="color: #990000;">isset</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$objectX</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$token</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span> <span style="color: #000088;">$objectY</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$token</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$missingValue</span><span style="color: #339933;">;</span> <span style="color: #009900;">&#125;</span>
+		<span style="color: #000088;">$dist</span> <span style="color: #339933;">+=</span> <span style="color: #990000;">pow</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$objectX</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$token</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">-</span> <span style="color: #000088;">$objectY</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$token</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>		
+	<span style="color: #009900;">&#125;</span>
+	<span style="color: #b1b100;">return</span> <span style="color: #000088;">$dist</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span></pre></div></div>
+
+<p>The most important point to make is the thinking behind the $missingValue. If it&#8217;s missing in one document, but not in the other, then we assign a small missing value to the document it&#8217;s missing in (e.g. the token has little bearing upon the meaning of that document). If it&#8217;s missing in both, the distance is 0, so we have found a perfect match (which is appropriate). You can either use pow(,2) or abs(), to make the value an unsigned scalar.</p>
+<p>Consequently, the distance between two documents is &#8216;the sum of their parts&#8217;. </p>
+														
+							<div class="thing-meta">
+								This thing was constructed by <div class="inline vcard"><span class="fn n"><a href="http://www.phpandme.net/author/admin/" title="Posts by admin">admin</a></span></div>. <br/><br/><br/>You can follow comments through the <a href='http://www.phpandme.net/2009/03/calculating-distance-between-two-documents/feed/'>RSS 2.0</a> feed. 
+
+	You can <a href="#respond">leave a comment</a>, or <a href="http://www.phpandme.net/2009/03/calculating-distance-between-two-documents/trackback/" rel="trackback">trackback</a>.
+
+		</div>
+								
+							<div id="thing-navigation" class="offset-bottom" style="font-weight:bold; padding-bottom:1em; border-bottom:1px solid #eee;">
+								<div class="left">&laquo; <a href="http://www.phpandme.net/2009/03/tfidf-weighting/">TF*IDF Weighting</a></div>
+								<div class="right"><a href="http://www.phpandme.net/2009/03/clustering-web-pages-into-similar-topics/">Clustering web pages into similar topics</a> &raquo;</div>
+
+								<div class="clear"></div>
+
+							</div>
+							<!-- google_ad_section_end -->
+							<div id="plugin-extra">
+														</div>
+						
+
+					
+<div id="comments">
+
+				<div id="respond">
+					<h3>Post a Comment</h3>
+
+					<div class="formcontainer">	
+						<form id="commentform" action="http://www.phpandme.net/wp-comments-post.php" method="post">
+
+
+							<p id="comment-notes">Your email is <em>never</em> published nor shared. Required fields are marked <span class="required">*</span></p>
+
+							<div class="form-label"><label for="author">Name</label> <span class="required">*</span></div>
+							<div class="form-input"><input id="author" name="author" type="text" value="" size="30" maxlength="20" tabindex="3" /></div>
+
+							<div class="form-label"><label for="email">Email</label> <span class="required">*</span></div>
+							<div class="form-input"><input id="email" name="email" type="text" value="" size="30" maxlength="50" tabindex="4" /></div>
+
+							<div class="form-label"><label for="url">Website</label></div>
+							<div class="form-input"><input id="url" name="url" type="text" value="" size="30" maxlength="50" tabindex="5" /></div>
+
+
+							<div class="form-label"><label for="comment">Comment</label></div>
+							<div class="form-textarea"><textarea id="comment" name="comment"  rows="8" tabindex="6"></textarea></div>
+
+							<div class="form-submit"><input id="submit" name="submit" type="submit" value="Post Comment" tabindex="7" /><input type="hidden" name="comment_post_ID" value="56" /></div>
+
+							
+						</form><!-- #commentform -->
+					</div><!-- .formcontainer -->
+
+				</div><!-- #respond -->
+
+			</div><!-- #comments -->
+	
+
+				</div>
+
+				</div>		
+
+		
+	</div>	
+	
+</div>
+
+<div style="clear:both;"></div>		
+
+	<div id="footer">
+		Unless noted, &copy; PHP And Me. Printed on 100% <a href="http://www.creativesynthesis.net/blog/projects/web-commodities/press-box/">Recycled Blogs</a>.
+			</div>
+	
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7776530-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

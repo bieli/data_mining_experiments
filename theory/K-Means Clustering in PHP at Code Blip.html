@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+<head profile="http://gmpg.org/xfn/11">
+	<title>K-Means Clustering in PHP at Code Blip</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="generator" content="WordPress 2.7.1" />
+	<meta name="template" content="K2 1.0-RC7" />
+ 	<meta name="description" content="A place to share and discuss problems and solutions we find along the way." />
+  
+	<link rel="stylesheet" type="text/css" media="screen" href="http://code.blip.pt/wp-content/themes/k2/style.css" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://code.blip.pt/feed/" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="http://code.blip.pt/feed/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://code.blip.pt/feed/atom/" />
+
+		<link rel="pingback" href="http://code.blip.pt/xmlrpc.php" />
+	
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://code.blip.pt/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://code.blip.pt/wp-includes/wlwmanifest.xml" /> 
+<script type='text/javascript' src='http://code.blip.pt/wp-includes/js/jquery/jquery.js?ver=1.2.6'></script>
+<script type='text/javascript' src='http://code.blip.pt/wp-content/themes/k2/js/k2.functions.js.php?ver=1.0-RC7'></script>
+<script type='text/javascript' src='http://code.blip.pt/wp-content/themes/k2/js/k2.slider.js.php?ver=1.0-RC7'></script>
+<script type='text/javascript' src='http://code.blip.pt/wp-content/themes/k2/js/k2.trimmer.js.php?ver=1.0-RC7'></script>
+<script type='text/javascript' src='http://code.blip.pt/wp-content/themes/k2/js/k2.rollingarchives.js.php?ver=1.0-RC7'></script>
+<script type='text/javascript' src='http://code.blip.pt/wp-content/themes/k2/js/k2.livesearch.js.php?ver=1.0-RC7'></script>
+<script type='text/javascript' src='http://code.blip.pt/wp-content/plugins/google-analyticator/external-tracking.js?ver=2.7.1'></script>
+<meta name="generator" content="WordPress 2.7.1" />
+
+<!-- Google Analytics Tracking by Google Analyticator: http://plugins.spiralwebconsulting.com/analyticator.html -->
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+
+	<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-8525624-2");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+	} catch(err) {}</script>
+			<script type="text/javascript">
+				var fileTypes = [''];
+				var outboundPrefix = '/outgoing/';
+				var downloadsPrefix = '/download/';
+			</script>
+				<link href="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Styles/SyntaxHighlighter.css" type="text/css" rel="stylesheet" />
+	
+<link rel="stylesheet" href="http://code.blip.pt/wp-content/plugins/wp-syntax/wp-syntax.css" type="text/css" media="screen" />
+		<style type="text/css">
+		
+				#header h1 a, #header .description {
+			color: #ffffff;
+		}
+				</style>
+		
+	<script type="text/javascript">
+	//<![CDATA[
+	
+		
+		jQuery(document).ready(function(){
+						K2.LiveSearch = new LiveSearch(
+				"http://code.blip.pt/wp-content/themes/k2/rollingarchive.php",
+				"Type and Wait to Search"
+			);
+			
+						K2.RollingArchives = new RollingArchives(
+				"http://code.blip.pt/wp-content/themes/k2/theloop.php",
+				"Page %1$d of %2$d"
+			);
+					});
+
+			//]]>
+	</script>
+
+		<link rel='archives' title='May 2009' href='http://code.blip.pt/2009/05/' />
+	<link rel='archives' title='April 2009' href='http://code.blip.pt/2009/04/' />
+	<link rel='archives' title='March 2009' href='http://code.blip.pt/2009/03/' />
+</head>
+
+<body class="">
+
+<!-- #Header-1 -->
+
+
+<a class="skiplink" href="#startcontent" accesskey="2">Skip to content</a>
+
+<div id="page">
+
+	
+	<div id="header">
+
+		<h1 class="blog-title"><a href="http://code.blip.pt/" accesskey="1">Code Blip</a></h1>
+		<p class="description">A place to share and discuss problems and solutions we find along the way.</p>
+
+		
+	<ul class="menu">
+				<li class="current_page_item"><a href="http://code.blip.pt/" title="Blog">Blog</a></li>
+		
+		
+		<li class="page_item page-item-7"><a href="http://code.blip.pt/about/" title="About">About</a></li>
+
+			</ul> <!-- .menu -->
+
+
+	</div> <!-- #header -->
+
+	<hr />
+
+	
+<div class="content">
+
+<div id="primary-wrapper">
+	<div id="primary">
+		<div id="notices"></div>
+		<a name="startcontent" id="startcontent"></a>
+
+		<div id="current-content" class="hfeed">
+
+			
+	
+		<div id="nav-above" class="navigation">
+
+					<div class="nav-previous"><a href="http://code.blip.pt/2009/03/18/cross-site-request-forgery-xsrf/"><span class="meta-nav">&laquo;</span> Segurança na web. Como proteger o seu site contra XSRF</a></div>
+			<div class="nav-next"><a href="http://code.blip.pt/2009/05/03/how-to-create-a-time-lapse-video-with-ubuntu/">How to create a time lapse video with Ubuntu <span class="meta-nav">&raquo;</span></a></div>
+		
+			<div class="clear"></div>
+		</div>
+
+
+	
+	
+		<div id="post-106" class="">
+			<div class="entry-head">
+				<h3 class="entry-title"><a href="http://code.blip.pt/2009/04/06/k-means-clustering-in-php/" rel="bookmark" title='Permanent Link to "K-Means Clustering in PHP"'>K-Means Clustering in PHP</a></h3>
+
+				<div class="entry-meta">
+					<span class="meta-start">Published</span> <div class="entry-author"><span class="meta-prep">by</span> <address class="vcard author"><a href="http://code.blip.pt/author/admin/" class="url fn" title="View all posts by José">José</a></address></div> <div class="entry-date"><span class="meta-prep">on</span> <abbr class="published" title="2009-04-06T03:00:00+0000">April 6, 2009</abbr></div> <div class="entry-categories"><span class="meta-prep">in</span> <a href="http://code.blip.pt/category/clustering/" title="View all posts in clustering">clustering</a> and <a href="http://code.blip.pt/category/php/" title="View all posts in php">php</a></div><span class="meta-end">.</span>
+					
+					
+											<span class="entry-tags">Tags: <a href="http://code.blip.pt/tag/algorithms/" rel="tag">algorithms</a>, <a href="http://code.blip.pt/tag/clustering/" rel="tag">clustering</a>, <a href="http://code.blip.pt/tag/php/" rel="tag">php</a>, <a href="http://code.blip.pt/tag/programming/" rel="tag">programming</a>.</span>
+									</div> <!-- .entry-meta -->
+			</div> <!-- .entry-head -->
+
+			<div class="entry-content">
+				<h3>Unsupervised learning technique to find clusters (subsets of data with similar caracteristics) in unknown data.</h3>
+<p>Given a random set of numbers, the problem to solve here is to determine a fixed number of intervals that best describe the distribution of the initial dataset. Instead of trying to identify how many clusters exists in the dataset (also possible, but outside the scope of this article), a K-means clustering algorithm will always return a fixed (K) number of subsets.</p>
+<p>Given the following data set:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="bash" style="font-family:monospace;">D = <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">1</span>, <span style="color: #000000;">3</span>, <span style="color: #000000;">2</span>, <span style="color: #000000;">5</span>, <span style="color: #000000;">6</span>, <span style="color: #000000;">2</span>, <span style="color: #000000;">3</span>, <span style="color: #000000;">1</span>, <span style="color: #000000;">30</span>, <span style="color: #000000;">36</span>, <span style="color: #000000;">45</span>, <span style="color: #000000;">3</span>, <span style="color: #000000;">15</span>, <span style="color: #000000;">19</span><span style="color: #7a0874; font-weight: bold;">&#93;</span></pre></div></div>
+
+<p>The idea would be to find 3 clusters with the most similar numbers:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="bash" style="font-family:monospace;">S = <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">1</span>,<span style="color: #000000;">1</span>,<span style="color: #000000;">2</span>,<span style="color: #000000;">2</span>,<span style="color: #000000;">3</span>,<span style="color: #000000;">3</span>,<span style="color: #000000;">3</span>,<span style="color: #000000;">7</span><span style="color: #7a0874; font-weight: bold;">&#93;</span>, <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">15</span>,<span style="color: #000000;">17</span><span style="color: #7a0874; font-weight: bold;">&#93;</span>, <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">30</span>,<span style="color: #000000;">36</span>,<span style="color: #000000;">45</span><span style="color: #7a0874; font-weight: bold;">&#93;</span><span style="color: #7a0874; font-weight: bold;">&#93;</span></pre></div></div>
+
+<p>For a human being, given such a small set and number of clusters, it would be relatively easy to determine the intervals that best describe the dataset, however that task becomes nearly impossibe as the dataset grows.</p>
+<p>K-Means algorithm (http://en.wikipedia.org/wiki/K-means_algorithm) will allows us to do this task automatically.</p>
+<p>It works by identifying the space of possible solutions and, as a first step, it creates each of the K clusters and distributes them randomly (or using an heuristic) throughout the available solution space and recalculates it&#8217;s positions on each iteration until there are no more changes and the clusters are finally found.<br />
+On each iteration, every value it the dataset is assigned to the closest cluster (which was initially positioned at random) by using a distance (or similarity) function. Once all the values have been assigned to one given cluster, the cluster position is then recalculated so that it is placed in the mean location of the values that are assigned to it.<br />
+As the algorithm iterates, values will move from one cluster to the other until there aren&#8217;t any more changes at which point the algorithm is finished. Depending on the problem, it might be worth limiting the number of iterations to look out for infinite loops.</p>
+<p>For our current problem, because it needs to be integrated in an existing application that our company is currently in the process of improving and it is entirely written in PHP, we will choose PHP as our programming language. You can choose any language you are most comfortable with to implement it, but  feel free to download the full version of the PHP code at the end of the article. The code comes with some examples and it is fairly well documented. If you ever need to use it, and email or link back is always welcomed.</p>
+
+<div class="wp_syntax"><div class="code"><pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">&lt;?php</span>
+&nbsp;
+<span style="color: #009933; font-style: italic;">/**
+* This code was created by Jose Fonseca (josefonseca@blip.pt) 
+*
+* Please feel free to use it in either commercial or non-comercial applications,
+* and if you enjoy using it feel free to let us know or to comment on our
+* technical blog at http://code.blip.pt
+*/</span>
+&nbsp;
+&nbsp;
+<span style="color: #990000;">print_r</span><span style="color: #009900;">&#40;</span>kmeans<span style="color: #009900;">&#40;</span><span style="color: #990000;">array</span><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">5</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">6</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">2</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">1</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">30</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">36</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">45</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">15</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">17</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #cc66cc;">3</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+&nbsp;
+<span style="color: #009933; font-style: italic;">/**
+* This function takes a array of integers and the number of clusters to create.
+* It returns a multidimensional array containing the original data organized
+* in clusters.
+*
+* @param array $data
+* @param int $k
+*
+* @return array
+*/</span>
+<span style="color: #000000; font-weight: bold;">function</span> kmeans<span style="color: #009900;">&#40;</span><span style="color: #000088;">$data</span><span style="color: #339933;">,</span> <span style="color: #000088;">$k</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+        <span style="color: #000088;">$cPositions</span> <span style="color: #339933;">=</span> assign_initial_positions<span style="color: #009900;">&#40;</span><span style="color: #000088;">$data</span><span style="color: #339933;">,</span> <span style="color: #000088;">$k</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #000088;">$clusters</span> <span style="color: #339933;">=</span> <span style="color: #990000;">array</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #b1b100;">while</span><span style="color: #009900;">&#40;</span><span style="color: #000000; font-weight: bold;">true</span><span style="color: #009900;">&#41;</span>
+        <span style="color: #009900;">&#123;</span>
+                <span style="color: #000088;">$changes</span> <span style="color: #339933;">=</span> kmeans_clustering<span style="color: #009900;">&#40;</span><span style="color: #000088;">$data</span><span style="color: #339933;">,</span> <span style="color: #000088;">$cPositions</span><span style="color: #339933;">,</span> <span style="color: #000088;">$clusters</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #339933;">!</span><span style="color: #000088;">$changes</span><span style="color: #009900;">&#41;</span>
+                <span style="color: #009900;">&#123;</span>
+                        <span style="color: #b1b100;">return</span> kmeans_get_cluster_values<span style="color: #009900;">&#40;</span><span style="color: #000088;">$clusters</span><span style="color: #339933;">,</span> <span style="color: #000088;">$data</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                <span style="color: #009900;">&#125;</span>
+                <span style="color: #000088;">$cPositions</span> <span style="color: #339933;">=</span> kmeans_recalculate_cpositions<span style="color: #009900;">&#40;</span><span style="color: #000088;">$cPositions</span><span style="color: #339933;">,</span> <span style="color: #000088;">$data</span><span style="color: #339933;">,</span> <span style="color: #000088;">$clusters</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+<span style="color: #009933; font-style: italic;">/**
+*
+*/</span>
+<span style="color: #000000; font-weight: bold;">function</span> kmeans_clustering<span style="color: #009900;">&#40;</span><span style="color: #000088;">$data</span><span style="color: #339933;">,</span> <span style="color: #000088;">$cPositions</span><span style="color: #339933;">,</span> <span style="color: #339933;">&amp;</span><span style="color: #000088;">$clusters</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+        <span style="color: #000088;">$nChanges</span> <span style="color: #339933;">=</span> <span style="color: #cc66cc;">0</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">foreach</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$data</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$dataKey</span> <span style="color: #339933;">=&gt;</span> <span style="color: #000088;">$value</span><span style="color: #009900;">&#41;</span>
+        <span style="color: #009900;">&#123;</span>
+                <span style="color: #000088;">$minDistance</span> <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">null</span><span style="color: #339933;">;</span>
+                <span style="color: #000088;">$cluster</span> <span style="color: #339933;">=</span> <span style="color: #000000; font-weight: bold;">null</span><span style="color: #339933;">;</span>
+                <span style="color: #b1b100;">foreach</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$cPositions</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$k</span> <span style="color: #339933;">=&gt;</span> <span style="color: #000088;">$position</span><span style="color: #009900;">&#41;</span>
+                <span style="color: #009900;">&#123;</span>
+                        <span style="color: #000088;">$distance</span> <span style="color: #339933;">=</span> distance<span style="color: #009900;">&#40;</span><span style="color: #000088;">$value</span><span style="color: #339933;">,</span> <span style="color: #000088;">$position</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">is_null</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$minDistance</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> <span style="color: #000088;">$minDistance</span> <span style="color: #339933;">&gt;</span> <span style="color: #000088;">$distance</span><span style="color: #009900;">&#41;</span>
+                        <span style="color: #009900;">&#123;</span>
+                                <span style="color: #000088;">$minDistance</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$distance</span><span style="color: #339933;">;</span>
+                                <span style="color: #000088;">$cluster</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$k</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span>
+                <span style="color: #b1b100;">if</span><span style="color: #009900;">&#40;</span><span style="color: #339933;">!</span><span style="color: #990000;">isset</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$clusters</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$dataKey</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">||</span> <span style="color: #000088;">$clusters</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$dataKey</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">!=</span> <span style="color: #000088;">$cluster</span><span style="color: #009900;">&#41;</span>
+                <span style="color: #009900;">&#123;</span>
+                        <span style="color: #000088;">$nChanges</span><span style="color: #339933;">++;</span>
+                <span style="color: #009900;">&#125;</span>
+                <span style="color: #000088;">$clusters</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$dataKey</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$cluster</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span>
+&nbsp;
+        <span style="color: #b1b100;">return</span> <span style="color: #000088;">$nChanges</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<span style="color: #000000; font-weight: bold;">function</span> kmeans_recalculate_cpositions<span style="color: #009900;">&#40;</span><span style="color: #000088;">$cPositions</span><span style="color: #339933;">,</span> <span style="color: #000088;">$data</span><span style="color: #339933;">,</span> <span style="color: #000088;">$clusters</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+        <span style="color: #000088;">$kValues</span> <span style="color: #339933;">=</span> kmeans_get_cluster_values<span style="color: #009900;">&#40;</span><span style="color: #000088;">$clusters</span><span style="color: #339933;">,</span> <span style="color: #000088;">$data</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">foreach</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$cPositions</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$k</span> <span style="color: #339933;">=&gt;</span> <span style="color: #000088;">$position</span><span style="color: #009900;">&#41;</span>
+        <span style="color: #009900;">&#123;</span>
+                <span style="color: #000088;">$cPositions</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$k</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> <span style="color: #990000;">empty</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$kValues</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$k</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span> ? <span style="color: #cc66cc;">0</span> <span style="color: #339933;">:</span> kmeans_avg<span style="color: #009900;">&#40;</span><span style="color: #000088;">$kValues</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$k</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span>
+        <span style="color: #b1b100;">return</span> <span style="color: #000088;">$cPositions</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+<span style="color: #000000; font-weight: bold;">function</span> kmeans_get_cluster_values<span style="color: #009900;">&#40;</span><span style="color: #000088;">$clusters</span><span style="color: #339933;">,</span> <span style="color: #000088;">$data</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+        <span style="color: #000088;">$values</span> <span style="color: #339933;">=</span> <span style="color: #990000;">array</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">foreach</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$clusters</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$dataKey</span> <span style="color: #339933;">=&gt;</span> <span style="color: #000088;">$cluster</span><span style="color: #009900;">&#41;</span>
+        <span style="color: #009900;">&#123;</span>
+                <span style="color: #000088;">$values</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$cluster</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$data</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$dataKey</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span>
+        <span style="color: #b1b100;">return</span> <span style="color: #000088;">$values</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+&nbsp;
+<span style="color: #000000; font-weight: bold;">function</span> kmeans_avg<span style="color: #009900;">&#40;</span><span style="color: #000088;">$values</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+        <span style="color: #000088;">$n</span> <span style="color: #339933;">=</span> <span style="color: #990000;">count</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$values</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #000088;">$sum</span> <span style="color: #339933;">=</span> <span style="color: #990000;">array_sum</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$values</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">return</span> <span style="color: #009900;">&#40;</span><span style="color: #000088;">$n</span> <span style="color: #339933;">==</span> <span style="color: #cc66cc;">0</span><span style="color: #009900;">&#41;</span> ? <span style="color: #cc66cc;">0</span> <span style="color: #339933;">:</span> <span style="color: #000088;">$sum</span> <span style="color: #339933;">/</span> <span style="color: #000088;">$n</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+<span style="color: #009933; font-style: italic;">/**
+* Calculates the distance (or similarity) between two values. The closer
+* the return value is to ZERO, the more similar the two values are.
+*
+* @param int $v1
+* @param int $v2
+*
+* @return int
+*/</span>
+<span style="color: #000000; font-weight: bold;">function</span> distance<span style="color: #009900;">&#40;</span><span style="color: #000088;">$v1</span><span style="color: #339933;">,</span> <span style="color: #000088;">$v2</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+  <span style="color: #b1b100;">return</span> <span style="color: #990000;">abs</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$v1</span><span style="color: #339933;">-</span><span style="color: #000088;">$v2</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span>
+&nbsp;
+<span style="color: #009933; font-style: italic;">/**
+* Creates the initial positions for the given
+* number of clusters and data.
+* @param array $data
+* @param int $k
+*
+* @return array
+*/</span>
+<span style="color: #000000; font-weight: bold;">function</span> assign_initial_positions<span style="color: #009900;">&#40;</span><span style="color: #000088;">$data</span><span style="color: #339933;">,</span> <span style="color: #000088;">$k</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+        <span style="color: #000088;">$min</span> <span style="color: #339933;">=</span> <span style="color: #990000;">min</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$data</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #000088;">$max</span> <span style="color: #339933;">=</span> <span style="color: #990000;">max</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$data</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #000088;">$int</span> <span style="color: #339933;">=</span> <span style="color: #990000;">ceil</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">abs</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$max</span> <span style="color: #339933;">-</span> <span style="color: #000088;">$min</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">/</span> <span style="color: #000088;">$k</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">while</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$k</span><span style="color: #339933;">--</span> <span style="color: #339933;">&gt;</span> <span style="color: #cc66cc;">0</span><span style="color: #009900;">&#41;</span>
+        <span style="color: #009900;">&#123;</span>
+                <span style="color: #000088;">$cPositions</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$k</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$min</span> <span style="color: #339933;">+</span> <span style="color: #000088;">$int</span> <span style="color: #339933;">*</span> <span style="color: #000088;">$k</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span>
+        <span style="color: #b1b100;">return</span> <span style="color: #000088;">$cPositions</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span></pre></div></div>
+
+<p>Output</p>
+
+<div class="wp_syntax"><div class="code"><pre class="bash" style="font-family:monospace;">Array
+<span style="color: #7a0874; font-weight: bold;">&#40;</span>
+    <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">0</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> Array
+        <span style="color: #7a0874; font-weight: bold;">&#40;</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">0</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">1</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">1</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">3</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">2</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">2</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">3</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">5</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">4</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">6</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">5</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">2</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">6</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">3</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">7</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">1</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">8</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">3</span>
+        <span style="color: #7a0874; font-weight: bold;">&#41;</span>
+&nbsp;
+    <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">2</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> Array
+        <span style="color: #7a0874; font-weight: bold;">&#40;</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">0</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">30</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">1</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">36</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">2</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">45</span>
+        <span style="color: #7a0874; font-weight: bold;">&#41;</span>
+&nbsp;
+    <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">1</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> Array
+        <span style="color: #7a0874; font-weight: bold;">&#40;</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">0</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">15</span>
+            <span style="color: #7a0874; font-weight: bold;">&#91;</span><span style="color: #000000;">1</span><span style="color: #7a0874; font-weight: bold;">&#93;</span> =<span style="color: #000000; font-weight: bold;">&gt;</span> <span style="color: #000000;">17</span>
+        <span style="color: #7a0874; font-weight: bold;">&#41;</span>
+&nbsp;
+<span style="color: #7a0874; font-weight: bold;">&#41;</span></pre></div></div>
+
+
+							</div> <!-- .entry-content -->
+
+		</div> <!-- #post-ID -->
+
+		
+
+
+		<div id="nav-below" class="navigation">
+
+					<div class="nav-previous"><a href="http://code.blip.pt/2009/03/18/cross-site-request-forgery-xsrf/"><span class="meta-nav">&laquo;</span> Segurança na web. Como proteger o seu site contra XSRF</a></div>
+			<div class="nav-next"><a href="http://code.blip.pt/2009/05/03/how-to-create-a-time-lapse-video-with-ubuntu/">How to create a time lapse video with Ubuntu <span class="meta-nav">&raquo;</span></a></div>
+		
+			<div class="clear"></div>
+		</div>
+
+ 
+
+
+			<div class="entry-comments comments">
+				
+		<h4><span id="comments">5</span> Responses to &#8220;K-Means Clustering in PHP&#8221;</h4>
+
+		<div class="metalinks">
+			<span class="commentsrsslink"><a href='http://code.blip.pt/2009/04/06/k-means-clustering-in-php/feed/'>Feed for this Entry</a></span>
+					</div>
+
+		<hr />
+
+			<ol id="commentlist">
+
+		
+			<li id="comment-82" class="">
+
+							<span class="gravatar">
+					<img alt='' src='http://www.gravatar.com/avatar/938b886d3c6e5b6938cfc9ec8e283273?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />				</span>
+			
+				<a href="#comment-82" class="counter" title="Permanent Link to this Comment">1</a>
+				<span class="commentauthor">aldo</span>
+
+				<div class="comment-meta">
+					<a href="#comment-82" title="Permanent Link to this Comment">
+						May 13, 2009 at 8:27 pm					</a>
+
+					
+									</div><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>thanks for your code</p>
+ 
+				</div><!-- .comment-content -->
+
+							</li>
+
+		
+			<li id="comment-117" class="">
+
+							<span class="gravatar">
+					<img alt='' src='http://www.gravatar.com/avatar/3a70858552ac55bf6022724722bf5dea?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />				</span>
+			
+				<a href="#comment-117" class="counter" title="Permanent Link to this Comment">2</a>
+				<span class="commentauthor">Didac</span>
+
+				<div class="comment-meta">
+					<a href="#comment-117" title="Permanent Link to this Comment">
+						May 18, 2009 at 12:17 am					</a>
+
+					
+									</div><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>You got an small problem in your code, I guess.</p>
+<p>In case one of the clouds does not get any value, this cloud is directly deleted.<br />
+You could ask for 45 clusters, but if in one step you only get 30 clusters with values, your function kmeans_get_cluster_values() will make tha array to have just 30 clusters, and on following steps, you don&#8217;t search for 45 clusters anymore. What about the cluster with mean=0?</p>
+<p>What if you want 3 clusters and you have the dataset:<br />
+1,1,1,1,1,1,1,2,20,20,20,20,20</p>
+<p>The result should be 1, 2 and 20, but as you get the initial representative values 1, 10 and 20, in the second step, 1s and the 2 go to 1, the 20s go to 20, and the three cluster array becomes a 2 cluster array, and no more changes are done.</p>
+ 
+				</div><!-- .comment-content -->
+
+							</li>
+
+		
+			<li id="comment-122" class="">
+
+							<span class="gravatar">
+					<img alt='' src='http://www.gravatar.com/avatar/c141ee44fa224e4c38023ac0e4b9cff2?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />				</span>
+			
+				<a href="#comment-122" class="counter" title="Permanent Link to this Comment">3</a>
+				<span class="commentauthor"><a href='http://www.blip.pt' rel='external nofollow' class='url'>José</a></span>
+
+				<div class="comment-meta">
+					<a href="#comment-122" title="Permanent Link to this Comment">
+						May 22, 2009 at 10:55 am					</a>
+
+					
+									</div><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Hi Didac</p>
+<p>Thanks for your comment. </p>
+<p>You are right, the code I posted was removing the clusters with no values assigned to it. This can be fixed by making some changes to the function that recalculates the clusters positions:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">function</span> kmeans_recalculate_cpositions<span style="color: #009900;">&#40;</span><span style="color: #000088;">$cPositions</span><span style="color: #339933;">,</span> <span style="color: #000088;">$data</span><span style="color: #339933;">,</span> <span style="color: #000088;">$clusters</span><span style="color: #009900;">&#41;</span>
+ <span style="color: #009900;">&#123;</span>
+ 	<span style="color: #000088;">$kValues</span> <span style="color: #339933;">=</span> kmeans_get_cluster_values<span style="color: #009900;">&#40;</span><span style="color: #000088;">$clusters</span><span style="color: #339933;">,</span> <span style="color: #000088;">$data</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #339933;">-</span>	<span style="color: #b1b100;">foreach</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$kValues</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$k</span> <span style="color: #339933;">=&gt;</span> <span style="color: #000088;">$values</span><span style="color: #009900;">&#41;</span>
+<span style="color: #339933;">+</span>	<span style="color: #b1b100;">foreach</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$cPositions</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$k</span> <span style="color: #339933;">=&gt;</span> <span style="color: #000088;">$position</span><span style="color: #009900;">&#41;</span>
+ 	<span style="color: #009900;">&#123;</span>
+<span style="color: #339933;">-</span>		<span style="color: #000088;">$cPosition</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$k</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> kmeans_avg<span style="color: #009900;">&#40;</span><span style="color: #000088;">$values</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #339933;">+</span>		<span style="color: #000088;">$cPositions</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$k</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> <span style="color: #990000;">empty</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$kValues</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$k</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span> ? <span style="color: #990000;">rand</span><span style="color: #009900;">&#40;</span><span style="color: #990000;">min</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$data</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #990000;">max</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$data</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">:</span> kmeans_avg<span style="color: #009900;">&#40;</span><span style="color: #000088;">$kValues</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$k</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+ 	<span style="color: #009900;">&#125;</span>
+ 	<span style="color: #b1b100;">return</span> <span style="color: #000088;">$cPositions</span><span style="color: #339933;">;</span>
+ <span style="color: #009900;">&#125;</span></pre></div></div>
+
+<p>In this case, if a cluster is empty I just pick a random position in the data set and wait for the next iteration.</p>
+<p>For the data set 1,1,1,1,1,1,1,2,20,20,20,20,20 finding the clusters 1s, 2 and 20s would be the optimal solution, but with this algorithm you will, most of the time, be stuck with a less-optimal solution which would be the one with only 2 clusters, 1s-2 and 20s.</p>
+<p>To find the optimal solution, you would have to improve the algorithm a lot. You would need to create a function to evaluate the quality of your solution, for example assuming that a solution where all clusters have values is better than a solution where some clusters are empty, and optimize it.<br />
+<a href="http://en.wikipedia.org/wiki/Simulated_annealing" rel="nofollow">Simulated annealing</a>, for example, is a technique to optimize such functions - &#8220;&#8230;At each step, the SA heuristic considers some neighbour s&#8217; of the current state s, and probabilistically decides between moving the system to state s&#8217; or staying in state s. The probabilities are chosen so that the system ultimately tends to move to states of lower energy. Typically this step is repeated until the system reaches a state that is good enough for the application, or until a given computation budget has been exhausted.&#8221;</p>
+<p>I hope this helps and thanks for visiting our blog,</p>
+<p>José</p>
+ 
+				</div><!-- .comment-content -->
+
+							</li>
+
+		
+			<li id="comment-127" class="">
+
+							<span class="gravatar">
+					<img alt='' src='http://www.gravatar.com/avatar/3a70858552ac55bf6022724722bf5dea?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />				</span>
+			
+				<a href="#comment-127" class="counter" title="Permanent Link to this Comment">4</a>
+				<span class="commentauthor">Didac</span>
+
+				<div class="comment-meta">
+					<a href="#comment-127" title="Permanent Link to this Comment">
+						May 22, 2009 at 9:07 pm					</a>
+
+					
+									</div><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>By the way, even in the function function kmeans_recalculate_cpositions(), there is a variable called $cPosition.</p>
+<p>If you check your code, you will see that you want to recalculate the cPositions, but you do all the changes in $cPosition, and this variable is never returned or moved to $cPositions.</p>
+<p>I guess that the variable called $cPosition should be called $cPositions.</p>
+<p>At least I did that change and now the code runs properly. If doing so, the empty clusters will not really disapear, but they will have the same cPosition value they had before, in case some objects can move to this cluster.</p>
+<p>I tried assigning random initial cPosition values, and sometimes I get repeated values, let&#8217;s say 4,4 and 10.</p>
+<p>For the example with the set<br />
+1,1,1,1,1,2,10,10,10,10<br />
+after one iteration, the cPositions become<br />
+1.111, 4 and 10</p>
+<p>Even that&#8217;s not the best example, it still gives a change to split the values in 3 clusters.</p>
+ 
+				</div><!-- .comment-content -->
+
+							</li>
+
+		
+			<li id="comment-132" class="">
+
+							<span class="gravatar">
+					<img alt='' src='http://www.gravatar.com/avatar/c141ee44fa224e4c38023ac0e4b9cff2?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />				</span>
+			
+				<a href="#comment-132" class="counter" title="Permanent Link to this Comment">5</a>
+				<span class="commentauthor"><a href='http://www.blip.pt' rel='external nofollow' class='url'>José</a></span>
+
+				<div class="comment-meta">
+					<a href="#comment-132" title="Permanent Link to this Comment">
+						May 23, 2009 at 11:22 am					</a>
+
+					
+									</div><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I think you miss-read the diff in my previous comment, the function to recalculate $cPositions is returning the updated array as it should be:</p>
+
+<div class="wp_syntax"><div class="code"><pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;">function</span> kmeans_recalculate_cpositions<span style="color: #009900;">&#40;</span><span style="color: #000088;">$cPositions</span><span style="color: #339933;">,</span> <span style="color: #000088;">$data</span><span style="color: #339933;">,</span> <span style="color: #000088;">$clusters</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+        <span style="color: #000088;">$kValues</span> <span style="color: #339933;">=</span> kmeans_get_cluster_values<span style="color: #009900;">&#40;</span><span style="color: #000088;">$clusters</span><span style="color: #339933;">,</span> <span style="color: #000088;">$data</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #b1b100;">foreach</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$cPositions</span> <span style="color: #b1b100;">as</span> <span style="color: #000088;">$k</span> <span style="color: #339933;">=&gt;</span> <span style="color: #000088;">$position</span><span style="color: #009900;">&#41;</span>
+        <span style="color: #009900;">&#123;</span>
+                <span style="color: #000088;">$cPositions</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$k</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> <span style="color: #990000;">empty</span><span style="color: #009900;">&#40;</span><span style="color: #000088;">$kValues</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$k</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span> ? <span style="color: #cc66cc;">0</span> <span style="color: #339933;">:</span> kmeans_avg<span style="color: #009900;">&#40;</span><span style="color: #000088;">$kValues</span><span style="color: #009900;">&#91;</span><span style="color: #000088;">$k</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span>
+        <span style="color: #b1b100;">return</span> <span style="color: #000088;">$cPositions</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span></pre></div></div>
+
+<p>If you copy the updated code you should get the correct results, however for the 1,1,1,1,1,2,20,20,20,20 data set you will still only get 2 clusters most of the time.</p>
+ 
+				</div><!-- .comment-content -->
+
+							</li>
+
+		
+		</ol><!-- #commentlist -->
+	
+			
+			<div id="comments-closed-msg">Comments are currently closed.</div>
+	
+				</div> <!-- .entry-comments -->
+
+		</div> <!-- #current-content -->
+
+		<div id="dynamic-content"></div>
+	</div> <!-- #primary -->
+</div> <!-- #primary-wrapper -->
+
+	<hr />
+<div id="sidebar-1" class="secondary">
+
+	<div id="search"><h4>Search</h4>
+		<form method="get" id="searchform" action="http://code.blip.pt">
+	<input type="text" id="s" name="s" value="" accesskey="4" />
+	<input type="submit" id="searchsubmit" value="go" />
+</form>
+	</div>
+
+
+	
+	
+	
+	
+
+	
+	
+
+	
+	
+
+	
+
+	
+
+	
+</div> <!-- #sidebar-1 -->
+
+<hr />
+<div id="sidebar-2" class="secondary">
+</div> <!-- #sidebar-2 -->
+
+<div class="clear"></div>
+
+</div> <!-- .content -->
+
+	
+	<div class="clear"></div>
+</div> <!-- Close Page -->
+
+<hr />
+
+
+<div id="footer">
+	
+	<p class="footerpoweredby">
+		Powered by <a href="http://wordpress.org/">WordPress<span class="wp-version">2.7.1</span></a> and <a href="http://getk2.com/" title="Loves you like a kitten.">K2<span class="k2-version">1.0-RC7</span></a>	</p>
+
+	<p class="footerfeedlinks">
+		<a href="http://code.blip.pt/feed/">Entries Feed</a> and <a href="http://code.blip.pt/comments/feed/">Comments Feed</a>	</p>
+
+	<p class="footerstats">
+		18 queries. 0.2800 seconds.	</p>
+</div>
+
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shCore.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCSharp.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushPhp.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushJScript.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushJava.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushVb.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushSql.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushXml.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushDelphi.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushPython.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushRuby.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCss.js"></script>
+<script class="javascript" src="http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/shBrushCpp.js"></script>
+<script class="javascript">
+dp.SyntaxHighlighter.ClipboardSwf = 'http://code.blip.pt/wp-content/plugins/google-syntax-highlighter/Scripts/clipboard.swf';
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+
+</body>
+</html> 
